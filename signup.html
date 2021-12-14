@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account signup</title>
+    <link rel="icon" href="landingImages/cbicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="signupContainer">
+        <h2>create an account</h2>
+
+        <div id="context">
+           <p>Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
+           <button id="googleButton"><img id="googleIcon" src="landingImages/google_image.png" alt=""><p>CREATE USING GOOGLE</p> </button>
+        </div>
+
+        <form id="inputDiv">
+            <label for="fullName">Full Name <span>required</span></label><br>
+            <input type="text" id="fullName" required><br>
+            <label for="username">Username <span>required</span></label><br>
+            <input type="text" id="username" required><br>
+            <label for="phone">Phone Number <span>required</span></label><br>
+            <input type="tel" pattern="[0-9]{10}" id="phone" required><br>
+            <label for="email">Email Address <span>required</span></label><br>
+            <input type="email" id="email" required><br>
+            <label for="password">Create Password <span>required</span></label><br>
+            <input type="password" id="password" required><br>
+            <input id="submitButton" type="submit" value="CREATE ACCOUNT">
+        </form>
+        <div id="belowSubmit">
+            <p>By creating an account you are agreeing to our Terms of Use and Privacy Policy.</p>
+        </div>
+    </div>
+
+
+    <script src="signup.js" type="module"></script>
+</body>
+</html>
