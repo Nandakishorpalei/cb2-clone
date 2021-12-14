@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Furniture Store & Unique Home Decor Online</title>
+
+    <!-- bootstrap link for sidebar -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Title icon -->
+    <link rel="icon" href="landingImages/cbicon.ico" />
+
+    <!-- fonts lib -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="newPage.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="newContainer">
+        <div id="sideBar"></div>
+        <div id="newCategory">
+          <div class="newTitle">
+            <a href="#">DECEMBER ARRIVALS</a>
+            <a href="#">SHOP THE LATEST</a>
+          </div>
+          <div>
+            <p>NEW</p>
+          </div>
+          <div id="newCategoryCards"></div>
+          <div id="newPledgeBox">
+            <h2>we're taking the 15% pledge</h2>
+            <p>
+              We're ensuring that 15% of our products and collaborations are
+              represented by
+              <br />
+              Black businesses, artists, and designers by 2024.
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <!-- radar section starts -->
+          <div id="radarDiv">
+            <div id="radarTextDiv">
+              <span id="radarText">ON OUR RADAR</span>
+              <hr />
+            </div>
+
+            <div id="radarSection">
+              <div class="radarItem">
+                <img src="landingImages/home_bt_1.jfif" alt="" />
+                <h3>
+                  SO GOOD THEY ALREADY SOLD OUT ONE-DON'T LET THEM GET AWAY
+                  AGAIN
+                </h3>
+                <p><a href="">SHOP BACK IN STOCK</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_2.jfif" alt="" />
+                <h3>
+                  HOW TO CREATE FANTASTICAL HOLIDAY FLORALS WITH STYLIST DAVID
+                  ANGER
+                </h3>
+                <p><a href="">READ & SHOP</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_3.jfif" alt="" />
+                <h3>MAKE DESIGN MAGIC HAPPEN WITH OUR FREE DESIGN SERVICES</h3>
+                <p><a href="">LEARN MORE</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_4.jfif" alt="" />
+                <h3>CB2 IN YOUR SPACE: PHOTO BY @CONVIVALPRODUCTION</h3>
+                <p><a href="">SEE ALL #MYCB2</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- radar section ends -->
+
+          <div class="newEverythingBox">
+            <h2>All New Everything: New Modern Furniture and Decor Inspo</h2>
+            <p>
+              Get inspired. Whether you're furnishing a room or just looking to
+              add a piece of decor, elevate your space with brand new modern
+              furniture and the latest home decor and accessories. Take your
+              lounge game up a level with a new <a href="sofa#">sofa</a>
+              —just in time to stream the next big series with the gang. For a
+              chic look, contrast your sofa's shade with on-trend decorative
+              pillows, poufs and throws. Looking for a surface that makes a
+              statement? The latest accent and side tables provide a solution
+              that's both functional and artistic. Add an upholstered chair or
+              rug in a contemporary print for an eclectic touch. Another option:
+              put the finishing touches on your room with art, prints and vases.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script type="module">
+  import sidebar from "./components/sidebar.js";
+  let sideDiv = document.getElementById("sideBar");
+  sideDiv.innerHTML = sidebar();
+
+  // script for NewCategoriesCard
+  let productData = [
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_all?wid=1000&qlt=50",
+      name: "VIEW ALL",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_furniture?wid=1000&qlt=50",
+      name: "FURNITURE",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_holiday?wid=1000&qlt=50",
+      name: "HOLIDAY",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_gifts_50?wid=1000&qlt=50",
+      name: "GIFTS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_decor?wid=1000&qlt=50",
+      name: "DECOR & MIRRORS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/072321_super_lighting_table?wid=1000&qlt=50",
+      name: "LIGHTING",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_pillows?wid=1000&qlt=50",
+      name: "PILLOWS & THROWS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_rugs?wid=1000&qlt=50",
+      name: "RUGS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_dining?wid=1000&qlt=50",
+      name: "KITCHEN & DINING",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_bed?wid=1000&qlt=50",
+      name: "BED & BATH",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/093021_super_new_favorites?wid=1000&qlt=50",
+      name: "OUR FAVORITES",
+    },
+  ];
+
+  let mainBox = document.getElementById("newCategoryCards");
+
+  const getData = (data) => {
+    data.forEach(({ img, name }) => {
+      let cardBox = document.createElement("div");
+      cardBox.setAttribute("class", "tarunCards");
+
+      let image = document.createElement("img");
+      image.src = img;
+      image.style.width = "100%";
+      image.style.height = "82%";
+
+      let cat = document.createElement("p");
+      cat.innerHTML = name;
+      cat.setAttribute("class", "tarunCardName");
+
+      cardBox.append(image, cat);
+
+      mainBox.append(cardBox);
+    });
+  };
+
+  getData(productData);
+</script>
