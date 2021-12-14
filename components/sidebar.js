@@ -11,16 +11,13 @@ function sidebar(){
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <style>
     #dropDownDiv{
      display: flex;
      flex-direction: column;
      width:200px;
      margin-left:30px;
-     font-family: 'Open Sans', sans-serif;
+     font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
     }
     #dropDownDiv button{
         background-color:transparent;
@@ -28,9 +25,7 @@ function sidebar(){
         margin-top:5px;
         border:none;
         text-align: left;
-        font-weight:700;
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: 1px;
+        font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
         font-size:16px;
 
     }
@@ -40,7 +35,6 @@ function sidebar(){
     #dropDownDiv a{
         font-weight:200;
         font-size:12px;
-        letter-spacing: 1px;
     }
 </style>
 
