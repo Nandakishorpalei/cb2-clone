@@ -6,6 +6,7 @@
     padding-right: 20px;
     position:absolute;
 }
+/* //header */
 #textHeader{
     text-align: left;
 }
@@ -71,11 +72,14 @@ width:16px;
 /* //product part */
 #productContainer{
     height:auto;
-    width:100%;
+    width:78%;
+    position:absolute;
+    margin-left: 18%;
+    margin-right: 4%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:2%;
-    margin-top:20px;
+    margin-top:14%;
     font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
 }
 
@@ -86,7 +90,6 @@ width:16px;
 #productContainer img{
     width:100%;
     height:280px;
-    filter:contrast(140%)
 }
 #bottomDiv{
     margin-top:20px;
@@ -108,4 +111,113 @@ width:16px;
     font-size:12px;
     letter-spacing: 1px;
     font-weight:100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* additional page */
+#additionalPageDiv{
+    display: flex;
+    position:absolute;
+    justify-content: right;
+    width:100%;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+    text-transform: uppercase;
+    color:#222222;
+    display: none;
+}
+#AdditionalPage{
+    background-color: white;
+    z-index:5;
+    position:fixed;
+}
+#AdditionalPage hr{
+    height:1px;
+    background-color: black;
+    margin-top:30px;
+}
+#AdditionalPage{
+    width:424px;
+    border:1px solid blue;
+}
+#closeAdditionalPage{
+    height:30px;
+    width:30px;
+  margin-left:90%;
+}
+#heading{
+    text-align: center;
+}
+#filterList{
+    width:324px;
+    min-height:100px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#firstRow{
+    display: flex;
+    justify-content: space-between;
+    width:260px;
+}
+#addSortByPrice{
+    border:none;
+    appearance: none;
+}
+#addSortByPrice select{
+    font-size:14px;
+}
+.textOnLeft{
+    justify-self:flex-start
+}
+.listItems{
+ 
+    /* background-color:green; */
+    width:100%;
+    padding:15px 0;
+    border-top:1px solid black;
+}
+.checkboxDiv{
+    display: flex;
+    }
+.checkboxDiv input{
+        width:30px;
+ }
+  span{
+    color:grey;
+    font-size:12px;
+} 
+
+#dropDownListcategory,#dropDownListcolor,#dropDownListmaterial,#dropDownListprice,#dropDownListtype
+,#dropDownListdesign,#dropDownListFabric{
+    display:none;
+}
+#additionalButton{
+    display: flex;
+    width:360px;
+    margin:40px 0;
+    margin-left:40px;
+}
+#additionalButton button{
+    border:none;
+    padding:15px 0;
+    width:48%;
+}
+#clearAll{
+    background-color: rgb(204, 202, 202);
+    margin-right: 4%;
+}
+#apply{
+    background-color: black;
+    color:white;
 }
