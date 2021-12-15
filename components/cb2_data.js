@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>data collection</title>
-    </head>
-    <body>
-
-    </body>
-</html>
-<script>
-    let cb2_data = [
+let cb2_data = [
     {
       img1 : "https://cb2.scene7.com/is/image/CB2/BalanceTkSkPllwCvr20X20inSHF21/$web_plp_card$/210409182016/20-balance-turkish-silk-pillow.jpg",
       img2: "https://cb2.scene7.com/is/image/CB2/TurkishSilkPillowGroupFHF21?$web_pdp_main_carousel_thumb_md$",
@@ -540,4 +530,5 @@
       price:"$59.95",
    },
   ]
-</script>
+
+  export default cb2_data
