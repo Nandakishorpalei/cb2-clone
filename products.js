@@ -234,10 +234,17 @@ function displayItem(productData){
     productContainer.innerHTML=null;
 
     productData.forEach((item,index)=>{
+        let selectedData = {
+            data:item
+        }
+        var div = document.createElement("div");
+        div.addEventListener("click",function(){
+           localStorage.setItem("selectedData",JSON.stringify(selectedData)); 
+        })
 
         console.log(item.img1);
 
-        var div = document.createElement("div");
+        
 
         var image = document.createElement("img");
         image.src= `${item.img1}`;
