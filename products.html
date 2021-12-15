@@ -12,13 +12,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
 </head>
 <body>
     <div id="sideBar"></div>
+    <div id="wholeContainer">
+        <div id="textHeader">
+            <p>NEW</p>
+            <h3>VIEW ALL NEW</h3>
+        </div>
+       <div id="stickyNav">
+           <button id="filterButton">
+               <span>FILTER</span>
+               <img id="filterIcon" src="landingImages/filterIcon.png" alt="">
+           </button>
+           <div>
+            <div id="sortBox">
+                <p id="totalItem">40 ITEMS</p>
+                <div id="sort">
+                 <select id="sortByPrice">
+                    <option value="Most Relevant">Most Relevant</option>
+                    <option value="low">price, low to high</option>
+                    <option value="price high to  low">price, high to low</option>
+                    <option value="new">new</option>
+                </select>
+                </div>
+            </div>
+           </div>
+       </div>
+       
+
+
+        <div id="productContainer"></div>
+    </div>
+   
+
+    <script src="products.js" type="module"></script>
 </body>
 </html>
-<script type="module">
-    import sidebar from "./components/sidebar.js";
-    let sideDiv = document.getElementById("sideBar");
-    sideDiv.innerHTML= sidebar();
-</script>

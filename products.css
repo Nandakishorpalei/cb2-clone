@@ -1,0 +1,104 @@
+#wholeContainer{
+    margin-left: 280px;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+    margin-top:20px;
+    width:80%;
+    padding-right: 20px;
+    position:absolute;
+}
+#textHeader{
+    text-align: left;
+}
+#textHeader p{
+    font-size:11px;
+}
+#textHeader h3{
+    margin-top:40px;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#stickyNav{
+    margin-top:60px;
+    display:flex;
+    justify-content: space-between;
+    font-size:12px;
+    margin-left:-14px;
+}
+#filterButton{
+    height:18.4px;
+    width:80px;
+    background-color: transparent;
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+#filterIcon{
+    margin-top:-5px;
+height:28px;
+width:28px;
+filter: brightness(200%) contrast(200%);
+}
+#sortBox{
+    display:flex;
+    width:250px;
+}
+#sortBox p{
+    color:#222222;
+}
+#sortByPrice{
+    border:none;
+    width:155px;
+    margin-left:30px;
+}
+
+#sort select {
+    text-transform: uppercase;
+}
+#sortByPrice option{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-right: 28px;
+    text-align: left;
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+
+
+
+/* //product part */
+#productContainer{
+    height:auto;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:2%;
+    margin-top:20px;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+}
+
+#productContainer div{
+    height:389px;
+    width:280px;
+}
+#productContainer img{
+    width:100%;
+    height:280px;
+    filter:contrast(140%)
+}
+#bottomDiv{
+    margin-top:20px;
+    color:#222222;
+}
+#productName,#productCategory,#productPrice,#productShip{
+    text-transform: uppercase; 
+    line-height: 0;
+    font-size:12px;
+    letter-spacing: 1px;
+    font-weight:100;
+}
+
