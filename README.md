@@ -1,5 +1,5 @@
 # cb2-clone
-unit3-construct
+unit3-construct project
 
 <p align="center">
     <img width="100%" src="https://cb2.scene7.com/is/image/CB2/CB2_Interiors_m_logo?fmt=png-alpha&wid=471" alt='myimage'>
@@ -9,7 +9,11 @@ unit3-construct
 
 `What is CB2?`
 ```
-Cool and edgy, CB2 is a modern furniture store for lofts, apartments and houses of all sizes. From velvet sofas to chrome coffee tables, CB2 has a wide selection of fresh, fun furniture for playful personalities. With the brand’s signature urban twist, pieces are often designed with city-living in mind, often small in scale and multifunctional. With the affordability of CB2 furniture, you can even decorate a first apartment in style.
+Cool and edgy, CB2 is a modern furniture store for lofts, apartments and houses of all sizes.
+From velvet sofas to chrome coffee tables, CB2 has a wide selection of fresh, fun furniture 
+for playful personalities. With the brand’s signature urban twist, pieces are often designed
+with city-living in mind, often small in scale and multifunctional. With the affordability of
+CB2 furniture, you can even decorate a first apartment in style.
 ```
 
 
