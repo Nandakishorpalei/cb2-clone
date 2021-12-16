@@ -23,13 +23,51 @@ displayItem(productData);
 //product sort
 
 //sort items
-let selectedItem = document.getElementById("sortByPrice");
-selectedItem.onchange=sortByPrice;
 
-function sortByPrice(){
-    var selectedOption = document.getElementById("sortByPrice").value;
-    console.log(selectedOption); 
-   if(selectedOption == "low"){
+let selectedFilter;
+let buttonContent = document.getElementById("containerSortButton");
+let count = 0;
+
+buttonContent.addEventListener("click",function(){
+    count++;
+if(count % 2 == 0){
+document.getElementById("dropdownList").style.display="none";
+}else{
+    document.getElementById("dropdownList").style.display="block";
+}
+})
+
+ document.getElementById("sequence").addEventListener("click",function(){
+    selectedFilter= this.value;
+       buttonContent.textContent = selectedFilter;
+       sortByPrice(selectedFilter)
+       document.getElementById("dropdownList").style.display="none";
+ });
+
+ document.getElementById("priceLowToHigh1").addEventListener("click",function(){
+    selectedFilter= this.value;
+       buttonContent.textContent = selectedFilter;
+       sortByPrice(selectedFilter)
+       document.getElementById("dropdownList").style.display="none";
+});
+
+document.getElementById("priceHighToLow2").addEventListener("click",function(){
+    selectedFilter= this.value;
+     buttonContent.textContent = selectedFilter;
+     sortByPrice(selectedFilter)
+     document.getElementById("dropdownList").style.display="none";
+});
+
+document.getElementById("newestFirst3").addEventListener("click",function(){
+    selectedFilter= this.value;
+   buttonContent.textContent = selectedFilter;
+   sortByPrice(selectedFilter)
+   document.getElementById("dropdownList").style.display="none";
+});
+
+function sortByPrice(selectedOption){
+
+   if(selectedOption == "price, Low To High"){
      productData = productData.sort(function (a,b){
          if(a.price > b.price) return 1;
          if(a.price < b.price) return -1;
@@ -37,7 +75,7 @@ function sortByPrice(){
      })
    }
   
-   if(selectedOption == "high"){
+   if(selectedOption == "price, High To Low"){
     productData = productData.sort(function (a,b){
         if(a.price > b.price) return -1;
         if(a.price < b.price) return 1;
@@ -46,15 +84,12 @@ function sortByPrice(){
   }
   
   if(selectedOption == "new"){
-    productData = productData.sort(function (a,b){
-        if(a.added > b.added) return -1;
-        if(a.added < b.added) return 1;
-        return 0;
-    })
+    productData = JSON.parse(localStorage.getItem("cbProductData"))
+    productData = productData.reverse();
   }
   
   
-  if(selectedOption == "normal"){
+  if(selectedOption == "Most Relevant"){
     let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
     productData = productNormal;
   }
@@ -171,8 +206,47 @@ else{
  document.getElementById("closeAdditionalPage").addEventListener("click",function(){
     document.getElementById("additionalPageDiv").style.display="none";
     document.getElementById("productPageContainer").style.opacity="1";
- })
+ });
  
+//sort section
+
+// let selectedFilter;
+// let buttonContent = document.getElementById("containerSortButton");
+// let count = 0;
+
+// buttonContent.addEventListener("click",function(){
+//     count++;
+// if(count % 2 == 0){
+// document.getElementById("dropdownList").style.display="none";
+// }else{
+//     document.getElementById("dropdownList").style.display="block";
+// }
+// })
+
+//  document.getElementById("sequence").addEventListener("click",function(){
+//     selectedFilter= this.value;
+//        buttonContent.textContent = selectedFilter;
+//        document.getElementById("dropdownList").style.display="none";
+//  });
+//  document.getElementById("priceLowToHigh1").addEventListener("click",function(){
+//     selectedFilter= this.value;
+//        buttonContent.textContent = selectedFilter;
+//        document.getElementById("dropdownList").style.display="none";
+// });
+// document.getElementById("priceHighToLow2").addEventListener("click",function(){
+//     selectedFilter= this.value;
+//      buttonContent.textContent = selectedFilter;
+//      document.getElementById("dropdownList").style.display="none";
+// });
+// document.getElementById("newestFirst3").addEventListener("click",function(){
+//     selectedFilter= this.value;
+//    buttonContent.textContent = selectedFilter;
+//    document.getElementById("dropdownList").style.display="none";
+// });
+
+
+
+
 
 // filter 
 // var gender="";

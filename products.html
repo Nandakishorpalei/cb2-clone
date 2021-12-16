@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/0e3d6c2c8d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="products.css">
     <link rel="icon" href="landingImages/cbicon.ico">
 </head>
@@ -28,12 +30,37 @@
             <div class="listItems"  id="addSort" style="padding:0">
                 <div id="firstRow">
                 <p class="adText textOnLeft">sort by price</p>
-                <select id="addSortByPrice">
-                   <option value="normal">Most Relevant</option>
-                   <option value="low">price, low to high</option>
-                   <option value="high">price, high to low</option>
-                   <option value="new">new</option>
-               </select>
+                <!-- <div id="sort" >
+                    <button id="containerSortButton" class="drop-down-button button-transparent" type="button" data-test="sort">Most Relevant</button>
+                    <ul id="dropdownList" role="listbox" aria-labelledby="top-container-sortBy" data-test="sort-options">
+                        
+                       <div class="check">
+
+                       <li tabindex="-1" role="option" aria-selected="false" class="sort-option  current" data-test="sort-option">
+                            <input type="radio" id="sequence" class="a11y-radio" name="filters" value="Most Relevant" >
+                            <label for="sequence0" class="a11y-radio-label">Most Relevant</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceLowToHigh1" class="a11y-radio" name="filters" value="price, Low To High" >
+                            <label for="priceLowToHigh1" class="a11y-radio-label">Price, low to high</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceHighToLow2" class="a11y-radio" name="filters" value="price, High To Low" >
+                            <label for="priceHighToLow2" class="a11y-radio-label">Price, high to low</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="newestFirst3" class="a11y-radio" name="filters" value="new" >
+                            <label for="newestFirst3" class="a11y-radio-label">New</label></li></ul>
+                        </div> -->
                </div>
             </div>
 
@@ -231,13 +258,38 @@
            <div>
             <div id="sortBox">
                 <p id="totalItem">40 ITEMS</p>
-                <div id="sort">
-                 <select id="sortByPrice">
-                    <option value="normal">Most Relevant</option>
-                    <option value="low">price, low to high</option>
-                    <option value="high">price, high to low</option>
-                    <option value="new">new</option>
-                </select>
+                <div id="sort" >
+                    <button id="containerSortButton" class="drop-down-button button-transparent" type="button" data-test="sort">Most Relevant</button>
+                    <ul id="dropdownList" role="listbox" aria-labelledby="top-container-sortBy" data-test="sort-options">
+                        
+                       <div class="check">
+
+                       <li tabindex="-1" role="option" aria-selected="false" class="sort-option  current" data-test="sort-option">
+                            <input type="radio" id="sequence" class="a11y-radio" name="filters" value="Most Relevant" >
+                            <label for="sequence0" class="a11y-radio-label">Most Relevant</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceLowToHigh1" class="a11y-radio" name="filters" value="price, Low To High" >
+                            <label for="priceLowToHigh1" class="a11y-radio-label">Price, low to high</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceHighToLow2" class="a11y-radio" name="filters" value="price, High To Low" >
+                            <label for="priceHighToLow2" class="a11y-radio-label">Price, high to low</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="newestFirst3" class="a11y-radio" name="filters" value="new" >
+                            <label for="newestFirst3" class="a11y-radio-label">New</label></li></ul>
+                        </div>
+
                 </div>
             </div>
            </div>
