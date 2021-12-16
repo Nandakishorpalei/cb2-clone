@@ -21,13 +21,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-#stickyNav{
+.sticky{
     margin-top:60px;
     display:flex;
     justify-content: space-between;
     font-size:12px;
     margin-left:-14px;
 }
+
 #filterButton{
     height:18.4px;
     width:80px;
@@ -250,7 +251,6 @@ li{
 }
 #AdditionalPage{
     width:424px;
-    border:1px solid blue;
 }
 #closeAdditionalPage{
     height:30px;
