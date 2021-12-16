@@ -150,15 +150,80 @@ li{
     letter-spacing: 1px;
     font-weight:100;
 }
+#addToWishlist{
+    position:absolute;
+    margin-left: 22%;
+    margin-top:-5px;
+    transition: all 0.5s;
+    z-index:20;
+}
 
 
 
+/* additional page */
 
 
+#adContainerSortButton{
+    background-color: transparent;
+    border:none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding:15px 0 0 0;
+    margin-left:0;
+    width:130%;
+}
+#adDropdownList{
+    margin:10px 0 0 -10px;
+    /* display: none; */
+    z-index:15;
+    background-color:white;
+    width:200px;
+}
 
+li{
+    list-style: none;
+    font-size: 11px;
+}
+/* Hide the browser's default radio button */
+.li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  ul li:hover .check {
+    border: 5px solid #FFFFFF;
+  }
+  
+  ul li .check::before {
+    display: block;
+    position: absolute;
+      content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
 
-
-
+  }
+  
+  input[type=radio]:checked ~ .check {
+   font-weight:bold;
+  }
+  
+  input[type=radio]:checked ~ .check::before{
+    font-weight:bold;
+  }
+  
+  input[type=radio]:checked ~ label{
+    font-weight:bold;
+  }
+  input[type=radio]:checked ~ .check::before{
+    font-weight:bold;
+  }
 
 
 
@@ -195,25 +260,13 @@ li{
 #heading{
     text-align: center;
 }
-#filterList{
+#adFilterList{
     width:324px;
     min-height:100px;
     margin: auto;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-}
-#firstRow{
-    display: flex;
-    justify-content: space-between;
-    width:260px;
-}
-#addSortByPrice{
-    border:none;
-    appearance: none;
-}
-#addSortByPrice select{
-    font-size:14px;
 }
 .textOnLeft{
     justify-self:flex-start
@@ -222,8 +275,10 @@ li{
  
     /* background-color:green; */
     width:100%;
-    padding:15px 0;
+    padding:15px 0 0 0;
     border-top:1px solid black;
+    display: flex;
+    justify-content: space-between;
 }
 .checkboxDiv{
     display: flex;
@@ -236,14 +291,14 @@ li{
     font-size:12px;
 } 
 
-#dropDownListcategory,#dropDownListcolor,#dropDownListmaterial,#dropDownListprice,#dropDownListtype
-,#dropDownListdesign,#dropDownListFabric{
+#adDropdownListcategory,#adDropdownListcolor,#adDropdownListmaterial,#adDropdownListprice,#adDropdownListtype
+,#adDropdownListdesign,#adDropdownListFabric{
     display:none;
 }
 #additionalButton{
     display: flex;
     width:360px;
-    margin:40px 0;
+    margin:45px 0;
     margin-left:40px;
 }
 #additionalButton button{
@@ -258,4 +313,18 @@ li{
 #apply{
     background-color: black;
     color:white;
+}
+.textOnLeft{
+    padding-top:16px;
+}
+#categorySort{
+    width:100%;
+    background-color: orange;
+}
+#adDropdownList{
+    display: none;
+}
+
+#additionalPageDiv .checkboxDiv{
+    text-transform: lowercase;
 }
