@@ -209,7 +209,7 @@ function displayItem(productData){
 
         function addtoSelected(){
             localStorage.setItem("selectedData",JSON.stringify(item)); 
-            window.location.href=""
+            window.location.href="productDescription.html";
          }
 
         var image = document.createElement("img");
