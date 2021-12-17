@@ -26,6 +26,7 @@ body{
     margin-left:4%;
     font-family: 'Open Sans', sans-serif;
     justify-content: space-between;
+    display:none;
  }
 #zeroContainer{
     width:105%;
@@ -208,6 +209,7 @@ background-color: #f4f4f4 ;
     background-color: white;
     top:0;
     right:0;
+    diplay:none;
 }
 #cartSummaryheader{
     display: flex;
