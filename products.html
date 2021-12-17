@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
+    <title>New Furniture Store & Unique Home Decor Online</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,13 +12,321 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/0e3d6c2c8d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="products.css">
+    <link rel="icon" href="landingImages/cbicon.ico">
 </head>
 <body>
+   
+    <div id="additionalPageDiv">
+        <div id="AdditionalPage">
+            <img  id="closeAdditionalPage" src="../landingImages/closeButton.png" alt="">
+            <div id="heading">
+                <p class="adText">filter & sort</p>
+            </div>
+       
+            <div id="adFilterList">
+    
+                <div class="listItems"  id="addSort" style="padding:0">
+                    <div id="firstRow">
+                    <div id="sort" >
+                        <div id="adContainerSortButton" class="drop-down-button button-transparent" type="button" data-test="sort">
+                            <p>sort by price <span>Most Relevant</span></p>
+                            <p><i class="fas fa-plus"></i></p>
+                        </div>
+                        <ul id="adDropdownList" role="listbox" aria-labelledby="top-container-sortBy" data-test="sort-options">
+                            
+                           <div class="check">
+    
+                           <li tabindex="-1" role="option" aria-selected="false" class="sort-option  current" data-test="sort-option">
+                                <input type="radio" id="adsequence" class="a11y-radio" name="filters" value="Most Relevant" >
+                                <label for="adsequence0" class="a11y-radio-label">Most Relevant</label></li>
+                            </div>
+    
+                           <div class="check">
+    
+                            <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                                <input type="radio" id="adpriceLowToHigh1" class="a11y-radio" name="filters" value="price, Low To High" >
+                                <label for="adpriceLowToHigh1" class="a11y-radio-label">Price, low to high</label></li>
+                            </div>
+    
+                           <div class="check">
+    
+                            <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                                <input type="radio" id="adpriceHighToLow2" class="a11y-radio" name="filters" value="price, High To Low" >
+                                <label for="adpriceHighToLow2" class="a11y-radio-label">Price, high to low</label></li>
+                            </div>
+    
+                           <div class="check">
+    
+                            <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                                <input type="radio" id="adnewestFirst3" class="a11y-radio" name="filters" value="new" >
+                                <label for="adnewestFirst3" class="a11y-radio-label">New</label></li></ul>
+                            </div>
+                   </div>
+                </div>
+    
+                <div class="listItems" id="categoryButton">
+                    <p>category</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListcategory" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="Decor" value="Decor and Mirrors">
+                        <span style="margin:1px 0 0 5px;">Decor and Mirrors  </span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="Furniture" value="Furniture">
+                        <span style="margin:1px 0 0 5px;">Furniture</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="Bedding" value="Bedding and Bath">
+                        <span style="margin:1px 0 0 5px;">Bedding and Bath</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="Kitchen" value="Kitchen and Dining">
+                        <span style="margin:1px 0 0 5px;">Kitchen and Dining</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="Holiday" value="Holiday">
+                        <span style="margin:1px 0 0 5px;">Holiday </span>
+                    </div>
+                </div>
+                <div class="listItems" id="categoryPrice">
+                    <p>price</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListprice" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="twenty" value="20">
+                        <span style="margin:1px 0 0 5px;">up to $20</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="fifty" value="50">
+                        <span style="margin:1px 0 0 5px;">$20 up to $50</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="hundred" value="100">
+                        <span style="margin:1px 0 0 5px;">$50 up to $100</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="fiveHundred" value="500">
+                        <span style="margin:1px 0 0 5px;">$100 up to $500</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="thousand" value="1000">
+                        <span style="margin:1px 0 0 5px;">500 up to $1000</span>
+                    </div>
+                </div>
+    
+    
+                <div class="listItems" id="categoryColor">
+                    <p>color</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListcolor" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Red</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Green</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Yellow</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Blue</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Orange</span>
+                    </div>
+                </div>
+
+                <div class="listItems" id="categoryMaterial">
+                <p>material</p>
+                <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListmaterial" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                </div>
+ 
+                <div class="listItems" id="categoryType">
+                    <p>type</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListtype" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                </div>
+                <div class="listItems" id="categoryDesign">
+                    <p>designer</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListdesign" class="dropDownDivs">
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                </div>
+                <div class="listItems" id="categoryFabric">
+                    <p>fabric</p>
+                    <p><i class="fas fa-plus"></i></p>
+                </div>
+                <div id="adDropdownListFabric" class="dropDownDivs">
+                    <div class="checkboxDivfabric">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                    <div class="checkboxDiv">
+                        <input type="checkbox" name="Remember" id="remember" >
+                        <span style="margin:1px 0 0 5px;">Remember me</span>
+                    </div>
+                </div>
+                   
+                </div>
+            <hr>
+            <div id="additionalButton">
+                <button id="clearAll">
+                   clear all
+                </button>
+                <button id="apply">
+                  apply
+                </button>
+            </div>
+            
+            </div>
+        </div>
+
+<div id="productPageContainer">
     <div id="sideBar"></div>
+
+    <div id="wholeContainer">
+        <div id="textHeader">
+            <p>NEW</p>
+            <h3>VIEW ALL NEW</h3>
+        </div>
+       <div class="sticky">
+           <button id="filterButton">
+               <span>FILTER</span>
+               <img id="filterIcon" src="landingImages/filterIcon.png" alt="">
+           </button>
+           <div>
+            <div id="sortBox">
+                <p id="totalItem">40 ITEMS</p>
+                <div id="sort" >
+                    <button id="containerSortButton" class="drop-down-button button-transparent" type="button" data-test="sort">Most Relevant</button>
+                    <ul id="dropdownList" role="listbox" aria-labelledby="top-container-sortBy" data-test="sort-options">
+                        
+                       <div class="check">
+
+                       <li tabindex="-1" role="option" aria-selected="false" class="sort-option  current" data-test="sort-option">
+                            <input type="radio" id="sequence" class="a11y-radio" name="filters" value="Most Relevant" >
+                            <label for="sequence0" class="a11y-radio-label">Most Relevant</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceLowToHigh1" class="a11y-radio" name="filters" value="price, Low To High" >
+                            <label for="priceLowToHigh1" class="a11y-radio-label">Price, low to high</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="priceHighToLow2" class="a11y-radio" name="filters" value="price, High To Low" >
+                            <label for="priceHighToLow2" class="a11y-radio-label">Price, high to low</label></li>
+                        </div>
+
+                       <div class="check">
+
+                        <li tabindex="-1" role="option" aria-selected="false" class="sort-option  " data-test="sort-option">
+                            <input type="radio" id="newestFirst3" class="a11y-radio" name="filters" value="new" >
+                            <label for="newestFirst3" class="a11y-radio-label">New</label></li></ul>
+                        </div>
+
+                </div>
+            </div>
+           </div>
+       </div>
+    </div>   
+
+
+        <div id="productContainer"></div>
+    </div>
+   
+    <script src="products.js" type="module"></script>
+
 </body>
 </html>
-<script type="module">
-    import sidebar from "./components/sidebar.js";
-    let sideDiv = document.getElementById("sideBar");
-    sideDiv.innerHTML= sidebar();
-</script>
