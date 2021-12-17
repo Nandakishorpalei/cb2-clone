@@ -3,10 +3,23 @@ import sidebar from "./components/sidebar.js";
     let sideDiv = document.getElementById("sideBar");
     sideDiv.innerHTML= sidebar();
 
-// footer import 
-// import footer from "./components/footer.js";   
-// let footerDiv = document.getElementById("pageFooter");
-// footerDiv.innerHTML=footer();
+    // import footer & append 
+// import footer from "./components/footer.js";
+// let footerDiv = document.getElementById("footerDiv");
+// footerDiv.innerHTML = footer();
+
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
 
 
 //product data array import
@@ -261,10 +274,13 @@ function displayItem(productData){
         ship.setAttribute("id","productShip");
         ship.textContent = "ships free";
         ship.style.color="red";
-        ship.style.marginTop = "20px";
         ship.addEventListener("click",addtoSelected);
 
-        bottomDiv.append(heart,name,category,price,ship)
+        let priceHeart = document.createElement("p");
+        priceHeart.setAttribute("id","priceHeart");
+        priceHeart.append(category,heart);
+
+        bottomDiv.append(name,priceHeart,price,ship)
 
         div.append(image,bottomDiv)
         
@@ -432,12 +448,16 @@ else{
  
  document.getElementById("filterButton").addEventListener("click",function(){
      document.getElementById("additionalPageDiv").style.display="flex";
-  document.getElementById("productPageContainer").style.opacity="0.5";
+  document.getElementById("productPageContainer").style.opacity="0.3";
+  document.getElementById("wholeContainer").style.opacity="0.3";
+  document.getElementById("productContainer").style.opacity="0.3";
 
  });
 
  document.getElementById("closeAdditionalPage").addEventListener("click",function(){
     document.getElementById("additionalPageDiv").style.display="none";
     document.getElementById("productPageContainer").style.opacity="1";
+    document.getElementById("wholeContainer").style.opacity="1";
+    document.getElementById("productContainer").style.opacity="1";
  });
  

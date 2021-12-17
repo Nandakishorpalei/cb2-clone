@@ -5,15 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CB2 Store Location - Curbside Pickup | CB2</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+        
+         <link rel="stylesheet" href="navbar.css">
+
         <link rel="stylesheet" href="storelocation.css">
+        <link rel="icon" href="landingImages/cbicon.ico">
     </head>
     <body>
+        <div id="navbarDiv"></div>
         <div id="MainStore">
              <div id="MainStore_H1">STORES & EVENTS</div>
 
              <div id="MainStore_Select">
                  <label>find a Store : </label>
-                <select name="state" id="MainStore_Select_State" onchange="changeimg()">
+                <select name="state" id="MainStore_Select_State">
                     <option value="">Select Store Location</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -39,7 +45,7 @@
              </div>
              <hr>
              <div class="MainStore_Select_Your">Your Nearest Store</div>
-             <hr>
+             <hr style="margin-bottom:16px;">
 
              <div id="MainStore_Address_And_Image">
 
@@ -240,10 +246,12 @@
               <span>©2021 CB2 TERMS OF USE PRIVACY POLICY SITE INDEX AD CHOICES CO-BROWSE</span>
             </div>
         </div>
+
+
     </body>
 </html>
 
 
-<script src="storelocation.js">
+<script src="storelocation.js" type="module">
     
 </script>

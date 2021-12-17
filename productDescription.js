@@ -10,6 +10,50 @@
 //   price: 149.0,
 // };
 
+
+// import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+
+
+ let type = document.getElementById("type");
+
+ document.getElementById("first").addEventListener("click", () => {
+   type.innerHTML = `<strong>MATERIAL:</strong> Down-alternative insert`;
+ });
+
+ document.getElementById("second").addEventListener("click", () => {
+   type.innerHTML = `<strong>MATERIAL:</strong> feather-down insert`;
+ });
+
+ //   checkbox script =======================>
+
+ document.getElementById("onlyOne").addEventListener("click", (checkbox) => {
+   let checkboxes = document.getElementsByName("rewardcheck");
+   checkboxes.forEach((item) => {
+     if (item !== checkbox) item.checked = false;
+   });
+ });
+
+
+
+
+
 let sampleData = JSON.parse(localStorage.getItem("selectedData"));
 console.log("sampleData:", sampleData);
 

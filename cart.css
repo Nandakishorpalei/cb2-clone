@@ -201,12 +201,13 @@ background-color: #f4f4f4 ;
 #rightCartContainer{
     width:362px;
     border:1px solid black;
-    height:auto;
-    margin-right:50px;
+    height:93vh;
     position:fixed;
     margin-left:70%;
-    padding:20px 40px 0;
+    padding:0 40px 0;
     background-color: white;
+    top:0;
+    right:0;
 }
 #cartSummaryheader{
     display: flex;

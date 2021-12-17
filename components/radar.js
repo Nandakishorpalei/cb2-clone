@@ -102,7 +102,6 @@ function radar(){
          
     </body>
     </html>
-    scrip
     `
     }
     

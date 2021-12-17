@@ -54,6 +54,7 @@ let data =  JSON.parse(localStorage.getItem("cbWishlistItem")) || [];
   btn2.id = "button_addtocart";
    btn2.addEventListener("click" , ()=>{
        localStorage.setItem("cbCartItem" , JSON.stringify(item));
+       window.location.href="cart.html";
    })
 
   let a2 = document.createElement("a");

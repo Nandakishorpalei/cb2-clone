@@ -21,7 +21,7 @@
 #sideBar {
   width: 21%;
   height: fit-content;
-
+  
   /* border: 1px solid red; */
 }
 
@@ -195,4 +195,20 @@ p {
   letter-spacing: 0.03em;
   line-height: 18px;
   margin-top: 4px;
+}
+
+@media screen and (min-height: 1000px) {
+  #newContainer {
+    display: flex;
+    width: 96%;
+    height: fit-content;
+    margin: auto;
+    /* border: 1px solid yellow; */
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+  }
+  #sidebar{
+    margin-left:-10%;
+  }
+
+
 }

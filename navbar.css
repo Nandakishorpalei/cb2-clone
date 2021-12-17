@@ -149,7 +149,7 @@ body {
   color: red;
 }
 #sidebarList p:nth-child(15),
-#sidebarList p:nth-child(16),
+#sidebarList p:nth-child(16), 
 #sidebarList p:nth-child(17),
 #sidebarList p:nth-child(18) {
   color: grey;

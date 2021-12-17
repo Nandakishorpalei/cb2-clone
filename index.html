@@ -9,10 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="icon" href="landingImages/cbicon.ico">
 </head>
 <body>
-    <div id="navImport"></div>
+    <div id="navbarDiv"></div>
     <div id="landingContainer">
         <div id="bodySection">
 
@@ -98,27 +100,32 @@
     <div id="radarDiv">
     </div>
    
+    <div id="footerDiv"></div>
 </body>
 </html>
 <script type="module">
+
+document.getElementById("landingContainer").addEventListener("click",function(){
+    window.location.href="newpage.html";
+})
+
 import radar from "./components/radar.js";
 let radarDiv = document.getElementById("radarDiv");
 radarDiv.innerHTML=radar();
 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script);
+
+ import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+
 </script>
 
-
-<!-- 
-
-  <!-- font awesome for icons -->
-  <link data-require="fontawesome@5.5.0" data-semver="5.5.0" rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
-
-  <!--font lib-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-
-  <!--Icon lib-->
-  <link href="https://fonts.googleapis.com/
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->

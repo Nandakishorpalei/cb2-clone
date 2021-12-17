@@ -4,10 +4,23 @@ let cartData;
 //import cart middle & cart right
 import cartMiddle from "./components/cartMiddle.js";
 
-// import footer 
+// import footer & append 
 import footer from "./components/footer.js";
 let footerDiv = document.getElementById("footerDiv");
 footerDiv.innerHTML = footer();
+
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
 
 // cart page display setting
 

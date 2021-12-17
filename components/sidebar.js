@@ -16,7 +16,6 @@ function sidebar(){
    display: flex;
    flex-direction: column;
    width:210px;
-   margin-left:50px;
    margin-right:20px;
    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
    position:absolute;

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Furniture Store & Unique Home Decor Online</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
 
     <!-- bootstrap link for sidebar -->
     <link
@@ -42,9 +43,11 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="newPage.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
   </head>
   <body>
-    <header></header>
+    <header id="navbarDiv"></header>
     <main>
       <div id="newContainer">
         <div id="sideBar"></div>
@@ -124,10 +127,28 @@
         </div>
       </div>
     </main>
+
+    <div id="footerDiv"></div>
   </body>
 </html>
 <script type="module">
- 
+ // import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+// navbar import section end
 
   import sidebar from "./components/sidebar.js";
   let sideDiv = document.getElementById("sideBar");
