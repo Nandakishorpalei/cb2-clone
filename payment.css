@@ -1,0 +1,19 @@
+body{
+    background-color: #f4f4f4;
+    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
+}
+#payMain{
+    display: flex;
+    flex-direction: row;
+}
+#payLeft{
+    background-color: white;
+    height: 1833px;
+    width: 73%;
+    border: 1px solid red;
+}
+#payRight{
+    height: 1833px;
+    width: 27%;
+    border: 1px solid green;
+}
