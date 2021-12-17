@@ -127,6 +127,8 @@
   </body>
 </html>
 <script type="module">
+ 
+
   import sidebar from "./components/sidebar.js";
   let sideDiv = document.getElementById("sideBar");
   sideDiv.innerHTML = sidebar();
@@ -185,9 +187,9 @@
     data.forEach(({ img, name }) => {
       let cardBox = document.createElement("div");
       cardBox.setAttribute("class", "tarunCards");
-      cardBox.addEventListener("click",function(){
-        window.location.href="products.html";
-      })
+      cardBox.addEventListener("click", function () {
+        window.location.href = "products.html";
+      });
 
       let image = document.createElement("img");
       image.src = img;

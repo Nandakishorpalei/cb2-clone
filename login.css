@@ -8,10 +8,11 @@
     margin-left:20%;
 }
 #signinContainerRight{
-    height:570px;
+    height:330px;
     width:360px;
     padding:2px;
     margin-left:2%;
+    border-left:2px solid black;
 }
 #context{
     margin-top:30px;
@@ -104,6 +105,7 @@ display: flex;
     width:97%;
     font-weight:bold;
     margin-left:20px;
+    margin-top:20px;
 }
 ul{
     margin-top:40px;
@@ -124,23 +126,18 @@ li{
 hr{
     position:absolute;
     height:360px;
-    margin-left:690px;
+    margin-left:45%;
     background-color:black;
 }
 button:hover{
   opacity:0.8;
 }
 @media screen and (max-width: 1300px) {
-    hr{
-        margin-left:630px; 
-    }  
+   
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
-    hr{
-        margin-left:580px; 
-    }   
-    
+   
 }
 
 @media screen and (max-width: 400px) {
@@ -148,6 +145,7 @@ button:hover{
         display:flex;
         flex-direction: column;
         width:360px;
+        padding-left:10px;
     }
     #signinContainerLeft{
         height:470px;
@@ -159,6 +157,7 @@ button:hover{
         width:95%;
         padding:2px;
         margin-left:0;
+        border:none;
     }
     #googleButton p{
         font-size:12px;
@@ -170,5 +169,6 @@ button:hover{
         width:90%;
         font-weight:bold;
         margin-left:20px;
+        margin-top:30px;
     }
 }
