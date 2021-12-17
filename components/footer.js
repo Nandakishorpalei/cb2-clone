@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            footer
-        </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
-        <link rel="stylesheet" href="footer.css">
-    </head>
-
-    <body>
-      <div id="Main_Footer">
+function footer(){
+    return `
+     <footer>
           <div id="Footer_up">
               <div id="footer_col1">
                   <p id="h3">KNOW WHAT'S UP. SIGN UP FOR EMAILS.</p>
@@ -73,7 +61,8 @@
             and are having problem with this website ,please call 800.606.6252 for assistance.</span></p>
             <span>©2021 CB2 TERMS OF USE PRIVACY POLICY SITE INDEX AD CHOICES CO-BROWSE</span>
           </div>
-      </div>
-​
-    </body>
-</html>
+          </footer>
+ `
+}
+
+export default footer;

@@ -4,6 +4,11 @@ let cartData;
 //import cart middle & cart right
 import cartMiddle from "./components/cartMiddle.js";
 
+// import footer 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
 // cart page display setting
 
 cartDataSetting();

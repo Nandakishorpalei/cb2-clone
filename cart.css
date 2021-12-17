@@ -6,6 +6,7 @@ body{
    margin-left:4%;
    font-family: 'Open Sans', sans-serif;
    justify-content: space-between;
+ 
 }
 #cartLength{
     margin:20px 0 0 70px;
@@ -205,6 +206,7 @@ background-color: #f4f4f4 ;
     position:fixed;
     margin-left:70%;
     padding:20px 40px 0;
+    background-color: white;
 }
 #cartSummaryheader{
     display: flex;

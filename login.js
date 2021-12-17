@@ -1,3 +1,9 @@
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+
+
 document.querySelector("form").addEventListener("submit",function(e){
     e.preventDefault();
     login()

@@ -328,3 +328,10 @@ li{
 #additionalPageDiv .checkboxDiv{
     text-transform: lowercase;
 }
+
+#pageFooter{
+    position: -webkit-sticky; 
+    position: sticky;
+    bottom: 0;
+    left:0;
+}

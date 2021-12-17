@@ -1,9 +1,15 @@
-//sidebar imported
+//sidebar import
 import sidebar from "./components/sidebar.js";
     let sideDiv = document.getElementById("sideBar");
     sideDiv.innerHTML= sidebar();
 
-//product data array imported
+// footer import 
+// import footer from "./components/footer.js";   
+// let footerDiv = document.getElementById("pageFooter");
+// footerDiv.innerHTML=footer();
+
+
+//product data array import
 import data from "./components/cb2_data.js";
 
 
