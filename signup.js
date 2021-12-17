@@ -1,3 +1,14 @@
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');
+          
+        script.src = "navbar.js";
+          
+   document.head.appendChild(script)
+
+
 document.querySelector("form").addEventListener("submit",function(e){
     e.preventDefault();
     register()

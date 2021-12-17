@@ -7,7 +7,7 @@ body{
     position: relative;
 }
 #discountBar{
-    padding: 0;
+    padding:28px 0 0 0;
     height: 36px;
     background-color: #222222;
     color: white;
@@ -22,6 +22,7 @@ body{
 }
 #discountBar p{
     font-size: 13px;
+    color:white;
 }
 #discountBar > p:nth-child(2),
 #discountBar > p:nth-child(9){
@@ -162,7 +163,7 @@ body{
     display: none;
     flex-direction: column;
     width: 260px;
-    height: 30%;
+    height: 25%;
     width: 13%;
     background-color: white;
     z-index: 11;
@@ -170,8 +171,8 @@ body{
     margin-left: 78%;
     transition: 0.3s;
     padding-right: 10px;
-    font-size: 12px;
-    padding: 2%;
+    font-size: 11px;
+    padding: 1%;
     box-sizing: border-box;
 }
 #accDetails p:nth-child(1){
@@ -181,7 +182,7 @@ body{
 #accDetails p:nth-child(2),
 #accDetails p:nth-child(3),
 #accDetails p:nth-child(4){
-    margin-top: 14%;
+    margin-top:-14px;
     cursor: pointer;
 }
 
@@ -224,12 +225,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
 }
 
 #gotoCart a{
-    color: white;
+
     text-decoration: none;
+}
+#gotoCart p{
+    margin-top:34px;
+    color: white;
+    font-size:16px;
 }
 
 #sidebar ::-webkit-scrollbar {
