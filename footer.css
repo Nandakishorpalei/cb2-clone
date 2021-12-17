@@ -130,16 +130,50 @@
    font-size:12px;
    line-height:30px;
 }
-#Footer_down>p>span{
+#Footer_down>p>.row1{
    color:#222222;
   font-weight:400;
    font-size:15px;
    line-height:30px;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 768px) {
-   #Main_Footer{
-       background-color: red;
-   }
+@media screen and (max-width: 400px){
+  #Footer_up{
+      width: 95%;
+      height: 63%;
+      padding:3% 3% 3% 3% ;
+      display: flex;
+      flex-direction: column;
+      gap: 5%;
+      text-align: center;
+  }
+  #footer_col1 #h3{
+   width:70%;
+   padding:0 15% ;
+}
+#footer_col1 #foo_in{
+ padding-top:-15%;  
+}
+#foo_fonts{
+   margin:0 0 5% 30%;
 }
 
+#footer_col3{
+   display: none;
+}
+#footer_col4{
+   display: none;
+}
+.hide{
+   display:none;
+}
+#grid{
+   margin-top:30px;
+   display: flex;
+   justify-content: space-between;
+   margin-top:-10px;
+}
+.contactUs{
+   padding:0 33%;
+}
+}

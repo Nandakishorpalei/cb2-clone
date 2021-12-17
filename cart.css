@@ -415,11 +415,11 @@ width:100px;
 .bottomRightDiv:nth-child(1){
     border-bottom: 0.2px solid rgb(212, 210, 210);
 }
-.bottomRightDiv:nth-child(1) img{
+#imgCross{
     height:24px;
-    margin-top:25%;
+    margin-top:10%;
 }
-.bottomRightDiv:nth-child(2) img{
+#imgDownload{
     height:28px;
     margin-top:15%;
 }
