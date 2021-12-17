@@ -7,7 +7,7 @@ import sidebar from "./components/sidebar.js";
 import data from "./components/cb2_data.js";
 
 
-//product section
+//product add section
 let productData = JSON.parse(localStorage.getItem("cbProductData")) || [];
 
 if(data.length > productData.length){
@@ -203,6 +203,7 @@ function displayItem(productData){
 
         function addtoSelected(){
             localStorage.setItem("selectedData",JSON.stringify(item)); 
+            window.location.href=""
          }
 
         var image = document.createElement("img");
@@ -310,40 +311,8 @@ document.getElementById("adnewestFirst3").addEventListener("click",function(){
 });
 
 
-// function sortByPrice(selectedOption){
+// additional Sort section
 
-//    if(selectedOption == "price, Low To High"){
-//      productData = productData.sort(function (a,b){
-//          if(a.price > b.price) return 1;
-//          if(a.price < b.price) return -1;
-//          return 0;
-//      })
-//    }
-  
-//    if(selectedOption == "price, High To Low"){
-//     productData = productData.sort(function (a,b){
-//         if(a.price > b.price) return -1;
-//         if(a.price < b.price) return 1;
-//         return 0;
-//     })
-//   }
-  
-//   if(selectedOption == "new"){
-//     productData = JSON.parse(localStorage.getItem("cbProductData"))
-//     productData = productData.reverse();
-//   }
-  
-  
-//   if(selectedOption == "Most Relevant"){
-//     let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
-//     productData = productNormal;
-//   }
-  
-//   displayItem(productData);
-//   }
-  
-
-//additional page
 
 let adhidenSort = true;
 document.getElementById("adContainerSortButton").addEventListener("click",()=>{

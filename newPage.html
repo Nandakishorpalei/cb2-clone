@@ -185,6 +185,9 @@
     data.forEach(({ img, name }) => {
       let cardBox = document.createElement("div");
       cardBox.setAttribute("class", "tarunCards");
+      cardBox.addEventListener("click",function(){
+        window.location.href="products.html";
+      })
 
       let image = document.createElement("img");
       image.src = img;
