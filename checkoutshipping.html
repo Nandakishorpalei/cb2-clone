@@ -7,6 +7,7 @@
         <title>Shipping | CB2</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
         <link rel="stylesheet" href="checkoutshipping.css">
+        <link rel="icon" href="landingImages/cbicon.ico">
     </head>
     <body>
       <div id="main_shipping">
@@ -36,13 +37,13 @@
                </div>
 
                <div class="shipping_input_name">
-                   <input type="text" required minlength="2" maxlength="15" size="13">
-                   <input type="text" required minlength="2" maxlength="15" size="13">
+                   <input id="shipping_input_name_first" type="text" required minlength="2" maxlength="15" size="13">
+                   <input id="shipping_input_name_last" type="text" required minlength="2" maxlength="15" size="13">
                </div>
 
                <div id="shipping_street">
                 <p>Street Address <span>  required</span></p>
-                <input type="text" required minlength="5" maxlength="25" size="20">
+                <input id="shipping_street_address" type="text" required minlength="5" maxlength="25" size="20">
                 <a href="#">Add apt,suite or other</a>
                </div>
 
@@ -52,8 +53,8 @@
             </div>
 
             <div class="shipping_input_name">
-                <input type="tel" pattern="[0-9]{6}" required>
-                <input type="text" required minlength="2" maxlength="15" size="13">
+                <input id="shipping_input_name_zip" type="tel" pattern="[0-9]{6}" required>
+                <input id="shipping_input_name_city" type="text" required minlength="2" maxlength="15" size="13">
             </div>
 
             <div id="shipping_selectform">
@@ -85,7 +86,7 @@
 
             <div id="shipping_phoneno">
              <p>Phone Number <span>required</span></p>
-             <input  type="tel" pattern="[0-9]{10}" required>
+             <input id="shipping_phoneno_phone"  type="tel" pattern="[0-9]{10}" required>
             
             </div>
 
@@ -164,8 +165,29 @@
     
 function nexttopayment(){
 
+    let arr = [];
+ 
+ let name = document.getElementById("shipping_input_name_first").value;
+ let last_n = document.getElementById("shipping_input_name_last").value;
+ let addre = document.getElementById("shipping_street_address").value;
+ let zip = document.getElementById("shipping_input_name_zip").value;
+ let city = document.getElementById("shipping_input_name_city").value;
+ let mobile = document.getElementById("shipping_phoneno_phone").value;
+
+ let data = {
+     first:name,
+     last:last_n,
+     address:addre,
+     zip_code:zip,
+     city_name:city,
+     phone:mobile,
+ }
+
+ arr.push(data);
+
+ localStorage.setItem("Checkoutdata",JSON.stringify(arr));
+
     window.location.href = "#";
-    alert("sai");
 }
 
 </script>

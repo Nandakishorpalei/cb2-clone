@@ -9,9 +9,6 @@
     <!-- title icon -->
     <link rel="icon" href="landingImages/cbicon.ico" />
 
-    <!-- css link -->
-    <link rel="stylesheet" href="ProductDescription.css" />
-
     <!-- font lib -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +26,7 @@
       src="https://kit.fontawesome.com/6b36d24ab1.js"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <!-- bootstrap lib -->
     <link
       rel="stylesheet"
@@ -52,9 +49,18 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+        <!-- css link -->
+
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="ProductDescription.css" />
+<style>
+  
+</style>
   </head>
   <body>
-    <header></header>
+    <header id="navbarDiv"></header>
     <main>
       <div class="headItemName">
         <p>PILLOWS & THROWS / PILLOWS</p>
@@ -586,10 +592,12 @@
       </div>
     </div>
   </body>
+
+  <footer id="footerDiv"></footer>
 </html>
-<script src="productDescription.js"></script>
-<script type="module">
-  //script for leftBoxfix
+<script src="productDescription.js"  type="module"></script>
+<!-- <script type="module"> -->
+  <!-- //script for leftBoxfix
 
   // let sec = document.getElementById("secBox");
   // sec.addEventListener("mouseover", () => {
@@ -605,22 +613,25 @@
 
   //   material type script
 
-  let type = document.getElementById("type");
 
-  document.getElementById("first").addEventListener("click", () => {
-    type.innerHTML = `<strong>MATERIAL:</strong> Down-alternative insert`;
-  });
 
-  document.getElementById("second").addEventListener("click", () => {
-    type.innerHTML = `<strong>MATERIAL:</strong> feather-down insert`;
-  });
 
-  //   checkbox script =======================>
+  // let type = document.getElementById("type");
 
-  document.getElementById("onlyOne").addEventListener("click", (checkbox) => {
-    let checkboxes = document.getElementsByName("rewardcheck");
-    checkboxes.forEach((item) => {
-      if (item !== checkbox) item.checked = false;
-    });
-  });
-</script>
+  // document.getElementById("first").addEventListener("click", () => {
+  //   type.innerHTML = `<strong>MATERIAL:</strong> Down-alternative insert`;
+  // });
+
+  // document.getElementById("second").addEventListener("click", () => {
+  //   type.innerHTML = `<strong>MATERIAL:</strong> feather-down insert`;
+  // });
+
+  // //   checkbox script =======================>
+
+  // document.getElementById("onlyOne").addEventListener("click", (checkbox) => {
+  //   let checkboxes = document.getElementsByName("rewardcheck");
+  //   checkboxes.forEach((item) => {
+  //     if (item !== checkbox) item.checked = false;
+  //   });
+  // }); -->
+<!-- </script> -->

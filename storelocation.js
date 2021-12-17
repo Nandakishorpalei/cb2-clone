@@ -1,3 +1,18 @@
+
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+let select = document.getElementById("MainStore_Select_State");
+select.onchange= changeimg;
+
 function changeimg(){
     let main = document.getElementById("MainStore_Select_State").value;
     let img = document.getElementById("MainStore_Images_img");

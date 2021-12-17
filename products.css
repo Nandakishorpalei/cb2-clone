@@ -155,11 +155,14 @@ input[type="radio"]:checked ~ .check::before {
   font-weight: 100;
 }
 #addToWishlist {
-  position: absolute;
-  margin-left: 22%;
   margin-top: -5px;
   transition: all 0.5s;
   z-index: 20;
+}
+#priceHeart{
+  display: flex;
+  justify-content: space-between;
+  height:0;
 }
 
 /* additional page */
@@ -335,4 +338,8 @@ span {
     position: sticky;
     bottom: 0;
     left:0;
+}
+
+#footerDiv{
+  bottom:0;
 }

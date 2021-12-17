@@ -26,6 +26,7 @@ body{
     margin-left:4%;
     font-family: 'Open Sans', sans-serif;
     justify-content: space-between;
+    display:none;
  }
 #zeroContainer{
     width:105%;
@@ -201,12 +202,14 @@ background-color: #f4f4f4 ;
 #rightCartContainer{
     width:362px;
     border:1px solid black;
-    height:auto;
-    margin-right:50px;
+    height:93vh;
     position:fixed;
     margin-left:70%;
-    padding:20px 40px 0;
+    padding:0 40px 0;
     background-color: white;
+    top:0;
+    right:0;
+    diplay:none;
 }
 #cartSummaryheader{
     display: flex;

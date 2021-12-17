@@ -4,12 +4,31 @@ let cartData;
 //import cart middle & cart right
 import cartMiddle from "./components/cartMiddle.js";
 
-// import footer 
+// import footer & append 
 import footer from "./components/footer.js";
 let footerDiv = document.getElementById("footerDiv");
 footerDiv.innerHTML = footer();
 
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
 // cart page display setting
+let zeroContainer = document.getElementById("zeroCartContainer");
+let cartContainer = document.getElementById("cartContainer");
+let cartCarousel = document.getElementById("carouselExampleControls");
+let rightContainer = document.getElementById("rightCartContainer");
+
+
 
 cartDataSetting();
 async function cartDataSetting(){
@@ -22,24 +41,21 @@ async function cartDataSetting(){
 
 document.getElementById("cartCount").textContent=`(${cartLength} item)`;
 
-let zeroContainer = document.getElementById("zeroCartContainer");
-let cartContainer = document.getElementById("cartContainer");
-let cartCarousel = document.getElementById("carouselExampleControls");
 
 if(cartData.length == 0){
 
     zeroContainer.style.display="flex";
     cartContainer.style.display="none";
     cartCarousel.style.display="none";
-
+    rightContainer.style.display="none";
 } 
 else{
     zeroContainer.style.display="none";
     cartContainer.style.display="flex";
     cartCarousel.style.display="block";
-
-    displayCartProducts(cartData);
+    rightContainer.style.display="block";
 }
+    displayCartProducts(cartData);
 
 
 }
@@ -180,6 +196,22 @@ products.forEach((element,index) => {
     cross.addEventListener("click",function(){
         cartData.splice(index,1);
         localStorage.setItem("cbWishlistItem",JSON.stringify(cartData));
+
+        if(cartData.length == 0){
+        
+            zeroContainer.style.display="flex";
+            cartContainer.style.display="none";
+            cartCarousel.style.display="none";
+            rightContainer.style.display="none";
+        } 
+        else{
+            zeroContainer.style.display="none";
+            cartContainer.style.display="flex";
+            cartCarousel.style.display="block";
+            rightContainer.style.display="block";
+        }
+
+
         displayCartProducts(cartData);
     })
 
