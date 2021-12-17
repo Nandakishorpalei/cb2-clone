@@ -233,5 +233,5 @@ document.getElementById("applyButton").addEventListener("click",function(){
 
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-    window.location.href = "checkout.html";
+    window.location.href = "checkoutshipping.html";
 })
