@@ -248,9 +248,3 @@
    font-size:15px;
    line-height:30px;
 }
-
-@media screen and (max-width: 768px) {
-   #Main_Footer{
-       background-color: red;
-   }
-}
