@@ -57,10 +57,10 @@ function navbar(){
             <!-- options div -->
 
             <div id="options">
-                <span><a href="storelocation.html"><img id="locationBtn" src="https://cdn-icons-png.flaticon.com/512/1216/1216844.png"></a></span>
-                <span ><a href="login.html"><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
-                <span ><a href="favorites.html"><img id="wishBtn" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
-                <span ><a href="cart.html">
+                <span id="locationButton"><a><img id="locationBtn" src="https://cdn-icons-png.flaticon.com/512/1216/1216844.png"></a></span>
+                <span><a href="login.html"><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
+                <span id="wishlistButton"><a><img id="wishBtn" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
+                <span id="cartButton"><a>
                     <p id="cartIndicator">0</p>
                     <img id="cartBtn" src="landingImages/cartIcon.png"></a></span>
             </div>
@@ -69,7 +69,7 @@ function navbar(){
 
     <div id="sidebar">
         <div id="sidebarList">
-            <p><a href="newpage.html">NEW</a></p>
+            <p id="newPageButton"><a>NEW</a></p>
             <p>FURNITURE</p>
             <p>HOLIDAY</p>
             <p>GIFTS</p>
@@ -93,7 +93,7 @@ function navbar(){
         <p><a href="login.html">SIGN IN</a></p>
         <p>ORDER TRACKING</p>
         <p>SCHEDULE DELIVERY</p>
-        <p>CB2 CREDIT CARD</p>
+        <p id="signOut">SIGN OUT</p>
     </div>
     <div id="wishDetails"></div>
     <div id="cartDetails">

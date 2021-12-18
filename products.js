@@ -117,25 +117,71 @@ function sortByPrice(selectedOption){
 
 //filter by category
 let filterItem;
+filterByCategory();
+
+let decor = false;
+let furniture = false;
+let bedding = false;
+let kitchen = false;
+let holiday =false;
+
+
+function filterByCategory(){
 document.getElementById("Decor").addEventListener("click",function(){
-    filterItem = this.value;
-    filterProductsCategory(filterItem);
+    if(decor){
+            let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
+            decor = false;
+            displayItem(productNormal)            
+    }else{
+        filterItem = this.value;
+        decor = true;
+        filterProductsCategory(filterItem);
+    }
+    
 })
 document.getElementById("Furniture").addEventListener("click",function(){
+    if(furniture){
+        let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
+        furniture = false;
+        displayItem(productNormal)            
+}else{
     filterItem = this.value;
+    furniture = true;
     filterProductsCategory(filterItem);
+}
 })
 document.getElementById("Bedding").addEventListener("click",function(){
+    if(bedding){
+        let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
+        bedding = false;
+        displayItem(productNormal)            
+}else{
     filterItem = this.value;
+    bedding = true;
     filterProductsCategory(filterItem);
+}
 })
 document.getElementById("Kitchen").addEventListener("click",function(){
+    if(kitchen){
+        let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
+        kitchen = false;
+        displayItem(productNormal)            
+}else{
     filterItem = this.value;
+    kitchen = true;
     filterProductsCategory(filterItem);
+}
 })
 document.getElementById("Holiday").addEventListener("click",function(){
+    if(holiday){
+        let productNormal = JSON.parse(localStorage.getItem("cbProductData"))
+        holiday = false;
+        displayItem(productNormal)            
+}else{
     filterItem = this.value;
+    holiday = true;
     filterProductsCategory(filterItem);
+}
 })
 
 function filterProductsCategory(filterItem){
@@ -147,9 +193,12 @@ function filterProductsCategory(filterItem){
    displayItem(filteredData)
 }
 
+}
 //filter by price
 
 let filterByPriceValue;
+filterbyPrice
+function filterbyPrice(){
 document.getElementById("twenty").addEventListener("click",function(){
     filterByPriceValue = +this.value;
     filterProductsPrice(filterByPriceValue);
@@ -205,7 +254,7 @@ function filterProductsPrice(filterByPriceValue){
     })
     displayItem(filteredData);
 }
-
+}
 
 
 //product display
@@ -342,10 +391,12 @@ document.getElementById("adContainerSortButton").addEventListener("click",()=>{
   if(adhidenSort){
        document.querySelector("ul").style.display="block";
        adhidenSort =false;
+       document.getElementById("plus1").innerHTML='<i class="fas fa-minus">';
     }
   else{
     document.querySelector("ul").style.display="none";
        adhidenSort =true;
+       document.getElementById("plus1").innerHTML='<i class="fas fa-plus">';
   }
 })
 
@@ -355,10 +406,12 @@ document.getElementById("categoryButton").addEventListener("click",()=>{
   if(adhidenCategory){
        document.getElementById("adDropdownListcategory").style.display="block";
        adhidenCategory =false;
+       document.getElementById("plus2").innerHTML='<i class="fas fa-minus">';
     }
   else{
        document.getElementById("adDropdownListcategory").style.display="none";
        adhidenCategory =true;
+       document.getElementById("plus2").innerHTML='<i class="fas fa-plus">';
   }
 })
 
@@ -367,10 +420,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
     if(adhidenColor){
         document.getElementById("adDropdownListcolor").style.display="block";
         adhidenColor = false;
+        document.getElementById("plus3").innerHTML='<i class="fas fa-minus">';
     }
     else{
         document.getElementById("adDropdownListcolor").style.display="none";
         adhidenColor = true;
+        document.getElementById("plus3").innerHTML='<i class="fas fa-plus">';
     }
  })
 
@@ -380,10 +435,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
      if(adhidenMaterial){
         document.getElementById("adDropdownListmaterial").style.display="block";
         adhidenMaterial = false;
+        document.getElementById("plus4").innerHTML='<i class="fas fa-minus">';
      }
      else{
         document.getElementById("adDropdownListmaterial").style.display="none";
         adhidenMaterial = true;
+        document.getElementById("plus4").innerHTML='<i class="fas fa-plus">';
      }
     
  
@@ -395,10 +452,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
      if(adhidenPrice){
         document.getElementById("adDropdownListprice").style.display="block";
         adhidenPrice = false;
+        document.getElementById("plus5").innerHTML='<i class="fas fa-minus">';
      }
      else{
         document.getElementById("adDropdownListprice").style.display="none";
         adhidenPrice = true;
+        document.getElementById("plus5").innerHTML='<i class="fas fa-plus">';
      }
  
  
@@ -410,10 +469,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
      if(adhidenType){
         document.getElementById("adDropdownListtype").style.display="block";
         adhidenType = false;
+        document.getElementById("plus6").innerHTML='<i class="fas fa-minus">';
      }
  else{
     document.getElementById("adDropdownListtype").style.display="none";
     adhidenType = true;
+    document.getElementById("plus6").innerHTML='<i class="fas fa-plus">';
  }
  
  })
@@ -424,10 +485,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
      if(adhidenDesign){
         document.getElementById("adDropdownListdesign").style.display="block";
         adhidenDesign = false;
+        document.getElementById("plus7").innerHTML='<i class="fas fa-minus">';
      }
      else{
         document.getElementById("adDropdownListdesign").style.display="none";
         adhidenDesign = true;
+        document.getElementById("plus7").innerHTML='<i class="fas fa-plus">';
      }
     
  
@@ -439,10 +502,12 @@ document.getElementById("categoryColor").addEventListener("click",()=>{
      if(adhidenFabric){
         document.getElementById("adDropdownListFabric").style.display="block";
         adhidenFabric = false;
+        document.getElementById("plus8").innerHTML='<i class="fas fa-minus">';
      }
 else{
     document.getElementById("adDropdownListFabric").style.display="none";
     adhidenFabric = true;
+    document.getElementById("plus8").innerHTML='<i class="fas fa-plus">';
 }
  })
 
@@ -461,4 +526,22 @@ else{
     document.getElementById("wholeContainer").style.opacity="1";
     document.getElementById("productContainer").style.opacity="1";
  });
- 
+
+ var id;
+// clearTimeout(id);
+
+//  id = setTimeout(function(){
+//      alert("hello");
+//     localStorage.removeItem("authenticate");
+//     },5000)
+
+    // 1800000
+
+ window.onbeforeunload = function(){
+    myfun();
+    return 'Are you sure you want to leave?';
+ };
+
+// window.addEventListener('unload', function(event) {
+//     alert('I am the 4th and last one…');
+//   });

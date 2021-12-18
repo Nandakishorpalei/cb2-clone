@@ -531,7 +531,7 @@ strong {
   display: none;
   flex-direction: column;
   width: 260px;
-  height: 3%;
+  height: 30px;
   width: 13%;
   background-color: white;
   z-index: 11;
@@ -549,9 +549,9 @@ strong {
   /* display: none; */
   flex-direction: column;
   width: 350px;
-  height: 4%;
+  height: 180px;
   width: 22%;
-  max-height: 4%;
+  max-height: 180px;
   background-color: white;
   z-index: 11;
   top: 108px;

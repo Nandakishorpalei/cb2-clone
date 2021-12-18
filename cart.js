@@ -86,7 +86,7 @@ let totalEstValue = document.getElementById("totalEstValue");
 shippingValue.textContent = "$120.00";
 taxValue.textContent = "$33.00";
 
-let totalItemValue = products.reduce((ac,el)=>{
+   totalItemValue = products.reduce((ac,el)=>{
     return  ac+el.price
     },0);
 
@@ -146,6 +146,13 @@ products.forEach((element,index) => {
         merchandiseValue.textContent = `$${((totalItemValue*itemQuantity)).toFixed(2)}`;
         document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity)).toFixed(2)}`;
         totalEstValue.textContent = `$${((totalItemValue*itemQuantity)+ 153 ).toFixed(2)}`;
+
+        totalValueToSend = ((totalItemValue*itemQuantity)+ 153 ).toFixed(2);
+        let cartPrice = {
+            price:totalValueToSend
+        }
+        localStorage.setItem("cartPrice",JSON.stringify(cartPrice));
+
     })
 
     topMiddle.append(quantity,update);
@@ -249,6 +256,8 @@ finally{
 }
 
 
+
+
 document.getElementById("applyButton").addEventListener("click",function(){
   let inputPromo =  document.getElementById("promoCode").value;
 
@@ -265,5 +274,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
 
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-    window.location.href = "checkoutshipping.html";
+
+window.location.href = "checkoutshipping.html";
+
 })

@@ -147,7 +147,7 @@ body {
 }
 #sidebarList p:nth-child(12) {
   color: red;
-}
+} 
 #sidebarList p:nth-child(15),
 #sidebarList p:nth-child(16), 
 #sidebarList p:nth-child(17),
@@ -180,7 +180,7 @@ body {
 #accDetails p:nth-child(2),
 #accDetails p:nth-child(3),
 #accDetails p:nth-child(4) {
-  margin-top: -14px;
+  /* margin-top: -14px; */
   cursor: pointer;
 }
 
