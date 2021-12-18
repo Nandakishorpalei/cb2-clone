@@ -1,58 +1,38 @@
-// appending data script=========>
-
-// let sampleData = {
-//   img1: "https://cb2.scene7.com/is/image/CB2/BalanceTkSkPllwCvr20X20inSHF21/$web_plp_card$/210409182016/20-balance-turkish-silk-pillow.jpg",
-//   img2: "https://cb2.scene7.com/is/image/CB2/TurkishSilkPillowGroupFHF21?$web_pdp_main_carousel_thumb_md$",
-//   img3: "https://cb2.scene7.com/is/image/CB2/BalanceTkSkPllwCvr20X20inSSF21?$web_pdp_main_carousel_thumb_md$",
-//   img4: "https://cb2.scene7.com/is/image/CB2/BalanceTkSkPllwCv20X20inAV2SSF21?$web_pdp_main_carousel_thumb_md$",
-//   name: "20 Balance Turkish Silk Pillow",
-//   catagory: "Bedding and Bath",
-//   price: 149.0,
-// };
-
-
-// import footer & append 
+// import footer & append
 import footer from "./components/footer.js";
 let footerDiv = document.getElementById("footerDiv");
 footerDiv.innerHTML = footer();
 
 // add below line in head section for footer style
-{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
 
-//navbar Import section start 
+//navbar Import section start
 
 import navbar from "./components/navbarImport.js";
 let navbarDiv = document.getElementById("navbarDiv");
 navbarDiv.innerHTML = navbar();
 
-var script = document.createElement('script');         
-script.src = "navbar.js";    
- document.head.appendChild(script)
+var script = document.createElement("script");
+script.src = "navbar.js";
+document.head.appendChild(script);
 
+let type = document.getElementById("type");
 
+document.getElementById("first").addEventListener("click", () => {
+  type.innerHTML = `<strong>MATERIAL:</strong> Down-alternative insert`;
+});
 
- let type = document.getElementById("type");
+document.getElementById("second").addEventListener("click", () => {
+  type.innerHTML = `<strong>MATERIAL:</strong> feather-down insert`;
+});
 
- document.getElementById("first").addEventListener("click", () => {
-   type.innerHTML = `<strong>MATERIAL:</strong> Down-alternative insert`;
- });
+//   checkbox script =======================>
 
- document.getElementById("second").addEventListener("click", () => {
-   type.innerHTML = `<strong>MATERIAL:</strong> feather-down insert`;
- });
-
- //   checkbox script =======================>
-
- document.getElementById("onlyOne").addEventListener("click", (checkbox) => {
-   let checkboxes = document.getElementsByName("rewardcheck");
-   checkboxes.forEach((item) => {
-     if (item !== checkbox) item.checked = false;
-   });
- });
-
-
-
-
+document.getElementById("onlyOne").addEventListener("click", (checkbox) => {
+  let checkboxes = document.getElementsByName("rewardcheck");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+});
 
 let sampleData = JSON.parse(localStorage.getItem("selectedData"));
 console.log("sampleData:", sampleData);
@@ -113,7 +93,7 @@ const appendData = ({ img1, img2, img3, img4, name, catagory, price }) => {
 
   let btn = document.getElementById("addToCartBtn");
   btn.addEventListener("click", () => {
-    addDragDetail({ price, img1 }, count);
+    addDragDetail({ price, img1, name, catagory }, count);
   });
 
   //setting default attribute to disabled of minus button
@@ -159,7 +139,7 @@ function countFunction(price, count) {
 
 // script for dragdown cartdetail box
 
-function addDragDetail({ price, img1 }, count) {
+function addDragDetail({ price, img1, name, catagory }, count) {
   if (newCount !== undefined) {
     count = newCount;
   }
@@ -168,14 +148,46 @@ function addDragDetail({ price, img1 }, count) {
   console.log("price:", price);
   let cartDiv = document.getElementById("cartDiv2");
   cartDiv.style.display = "block";
+  cartDiv.style.transition = "5s";
 
   let remove = document.getElementById("remove");
   remove.addEventListener("click", () => {
     cartDiv.style.display = "none";
   });
 
+  let itemAdded = document.getElementById("itemAdded");
+  itemAdded.innerHTML = `<span><i class="fas fa-check"></i></span> ${count} item added to your cart`;
+
   let imgBox = document.getElementById("leftImgBox");
-  let img = document.createElement("img");
+  let img2 = document.createElement("img");
+  img2.src = img1;
+  console.log("img1:", img1);
+  img2.style.width = "100%";
+
+  imgBox.append(img2);
+
+  let rightP1 = document.getElementById("rightP1");
+  rightP1.innerHTML = `<strong>Your Cart: ${count} items</strong>`;
+
+  let total = count * price;
+  let subTotal1 = document.getElementById("subTotal1");
+  subTotal1.innerText = `$${total}`;
+
+  let subTotal2 = document.getElementById("subTotal2");
+  subTotal2.innerHTML = `<strong>$${total}</strong>`;
+
+  let iconTitle = document.getElementById("iconTitle");
+  iconTitle.innerHTML = `${name}`;
+
+  let desData = {
+    count,
+    total,
+    img1,
+    name,
+    catagory,
+  };
+
+  localStorage.setItem("cbCartItem", JSON.stringify(desData));
 }
 
 // script for dragdown

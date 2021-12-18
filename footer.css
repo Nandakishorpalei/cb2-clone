@@ -139,8 +139,8 @@
 
 @media screen and (max-width: 400px){
   #Footer_up{
-      width: 95%;
-      height: 63%;
+      width: 100vw;
+      height: auto;
       padding:3% 3% 3% 3% ;
       display: flex;
       flex-direction: column;
@@ -155,7 +155,7 @@
  padding-top:-15%;  
 }
 #foo_fonts{
-   margin:0 0 5% 30%;
+   margin:0 0 5% 20%;
 }
 
 #footer_col3{
@@ -175,8 +175,12 @@
    display: flex;
    justify-content: space-between;
    margin-top:-10px;
+   padding:0 15%;
 }
 .contactUs{
    padding:0 33%;
+}
+#Footer_down{
+   padding:0 15%;
 }
 }

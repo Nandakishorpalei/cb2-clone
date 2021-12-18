@@ -399,11 +399,18 @@ body {
   background: white;
   position: fixed;
   font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+  transition: 1s;
 }
 #cartDiv2 p,
 strong {
   text-transform: none;
 }
+
+#leftImgBox {
+  width: 23%;
+  margin-bottom: 5%;
+}
+
 #cartDiv2 > div:nth-child(1) {
   width: 85%;
   margin: auto;
@@ -434,6 +441,7 @@ strong {
 #leftBox3 {
   display: flex;
   gap: 10px;
+  margin-bottom: -2%;
 }
 
 #rightDrag {
@@ -516,8 +524,6 @@ strong {
   letter-spacing: 1px;
 }
 
-
-
 /* navbar special */
 #navbarDiv #accDetails {
   border: 1px solid grey;
@@ -525,7 +531,7 @@ strong {
   display: none;
   flex-direction: column;
   width: 260px;
-  height: 3%;
+  height: 30px;
   width: 13%;
   background-color: white;
   z-index: 11;
@@ -543,9 +549,9 @@ strong {
   /* display: none; */
   flex-direction: column;
   width: 350px;
-  height: 4%;
+  height: 180px;
   width: 22%;
-  max-height: 4%;
+  max-height: 180px;
   background-color: white;
   z-index: 11;
   top: 108px;
@@ -557,5 +563,5 @@ strong {
   box-sizing: border-box;
 }
 #gotoCart p {
-padding-bottom: 20px;
+  padding-bottom: 20px;
 }
