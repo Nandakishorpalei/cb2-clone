@@ -1,13 +1,15 @@
 #main_footer{
-   width:100%;
+   width:98.8vw;
    height:570px;
+   box-sizing: border-box;
    background-color: rgb(247,247,247);
    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
 }
 #Footer_up{
-    width: 100%;
+    width: 98.8vw;
     height: 63%;
-    padding:3% 3% 3% 3% ;
+    padding:0 10%;
+    box-sizing: border-box;
     display: flex;
     gap: 5%;
     background-color: rgb(247,247,247);

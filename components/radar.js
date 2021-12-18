@@ -55,6 +55,7 @@ function radar(){
     h3{
         padding-left:5px;
         opacity:0.8;
+        font-size:20px;
     }
     p{
         margin-top:20px;

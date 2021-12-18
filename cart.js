@@ -156,15 +156,15 @@ products.forEach((element,index) => {
     finalValue += ((Number(totalItemValue))*(Number(itemQuantity)));
     console.log('finalValue:', finalValue)
    
-    merchandiseValue.textContent = `$${finalValue}`;
+    merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
     if(products.length != 0){
-    totalEstValue.textContent = `$${(finalValue + 153 )}`;
+    totalEstValue.textContent = `$${(finalValue + 153 ).toFixed(2)}`;
 }
     update.addEventListener("click",function(){
-        merchandiseValue.textContent = `$${finalValue}`;
-        document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity))}`;
+        merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
+        document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity).toFixed(2))}`;
         if(products.length != 0){
-        totalEstValue.textContent = `$${(finalValue+ 153 )}`;
+        totalEstValue.textContent = `$${(finalValue+ 153 ).toFixed(2)}`;
         }
     })
 
@@ -287,7 +287,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
 
     finalValue = (finalValue * 70 )/100;
 
-    document.getElementById("totalEstValue").textContent = `$${finalValue}`;
+    document.getElementById("totalEstValue").textContent = `$${finalValue.toFixed(2)}`;
     alert("Promo code applied successfully");
 
     let totalCost = {

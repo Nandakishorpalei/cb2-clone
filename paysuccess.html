@@ -12,14 +12,37 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="landingImages/cbicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+
+     <!-- bootstrap
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+
     <link rel="stylesheet" href="checkoutshipping.css">
     <!-- bootstap link -->
     <title>Payment & Billing | CB2</title>
+<style>
+    .btn-outline-success{
+        background-color: transparent;
+        border-radius: 5%;
+        padding:4px 10px;
+        margin-bottom:60px;
+    }
+    .btn-outline-success:hover{
+        transition: all 1s;
+        background-color: green;
+        color:white;
+        border:1px solid white;
+        padding:6px 13px;
+    }
+</style>
 </head>
 
 <body>
     <div id="payMain">
-        <div id="payLeft">
+        <div id="payLeft"  style="width:100vw;">
             <div class="shipping_cb2logo">
                 <h1>CB2</h1>
             </div>
@@ -27,7 +50,7 @@
             <br>
             <br>
 
-            <div id="shipping_left_number"><div>1</div>---------------------------------------<div>2</div>---------------------------------------<div class="span1">3</div></div>
+            <div id="shipping_left_number"><div>1</div>-------------------------------------------------------<div>2</div>------------------------------------------------------<div class="span1">3</div></div>
             <div id="shipping_left_tag">
                 <div>Shipping and Gifts Options</div>
                 <div>Payment and Billing</div>
@@ -35,15 +58,15 @@
             </div>
 
             <div id="order_placed">
-                <img src="https://cdn-icons.flaticon.com/png/512/295/premium/295743.png?token=exp=1639819198~hmac=92e71b56ff6aa97715e332d632c980c1" alt="">
+                <img style="height:200px;" src="https://cdn-icons.flaticon.com/png/512/295/premium/295743.png?token=exp=1639819198~hmac=92e71b56ff6aa97715e332d632c980c1" alt="">
                 <p>ORDER PLACED SUCCESSFULLY</p>
                 <p>Thanks For Shopping With Us</p>
-                <a href="index.html"><p>Countinue Shopping</p></a>
+                <a href="index.html"><button type="button" class="btn btn-outline-success">Success</button></a>
             </div>
 
 
 
-            <div id="Checkout_payement_under">
+            <div id="Checkout_payement_under" style="text-align: center;padding-top:20px;">
                 <h2>Rewards</h2>
                 <p>For validation purposes you must use your Crate and Barrel or CB2</p>
                 <p>credit card to redeem Rewards Dollars. Multiple Rewards Dollars can be</p>
@@ -54,9 +77,9 @@
 
             <!-- bottom checkout -->
 
-               <p id="tolearnmore">To learn more about how we use your information, read our <a href="#">Privacy Policy.</a></p>
+               <p id="tolearnmore" style="text-align: center;margin-top: -30px;">To learn more about how we use your information, read our <a href="#">Privacy Policy.</a></p>
    
-               <div id="shipping_safeandsecure">
+               <div id="shipping_safeandsecure" style="width:50%;justify-content: center;margin:auto;">
                    <i class="fas fa-unlock-alt"></i>
                    <p>Secure Checkout Shopping is always <a href="#">safe and secure</a></p>
                </div>
@@ -80,26 +103,7 @@
                    </div>
                </div>
         </div>
-        <div id="payRight">
-            <div id="shipping_right_total">
-                <div id="main_shipping_right_only">
-                 <div>
-                     <p>Order Summary</p>
-                     <p class="Sipping_Merchandice">Merchandise:</p>
-                     <p class="Sipping_Merchandice">Shipping & Handling :</p>
-                     <p class="Shipping_Discount">Shipping Discount :</p>
-                     <p class="Sipping_Merchandice">Tax:</p>
-                 </div>
-                 <div id="Shipping_Href_Cart">
-                     <a href="#">Edit Cart</a>
-                     <p class="Sipping_Merchandice">$149.00</p>
-                     <p class="Sipping_Merchandice">$21.95</p>
-                     <p class="Shipping_Discount">-$21.95</p>
-                     <p class="Sipping_Merchandice">$10.80</p>
-                 </div>
-            </div>
-        </div>
-        </div>   
+
     </div>
 </body>
 </html>

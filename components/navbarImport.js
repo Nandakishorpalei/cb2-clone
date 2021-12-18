@@ -17,7 +17,7 @@ function navbar(){
  
 </head>
 
-<body>
+<body> 
     <div id="navBar">
         <!-- header bar -->
         <div id="discountBar">           
@@ -107,6 +107,58 @@ function navbar(){
             </a>
         </div>
     </div>
+
+
+    
+    <!-- div for phone -->
+    <div id="phoneNav">
+     <div id="mainNavPhone">
+         <div id="menuBtnPhone"><span class="material-icons" style="margin-top:5px;" id="menuicon">menu</span></div>
+         <div id="searchIconPhone"><img class="paddingTop" src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt=""></div>
+         <div id="cb2logoPhone">
+             <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
+         </div>
+         <div id="wishIconPhone">
+             <span ><a href="favorites.html"><img class="paddingTop" id="wishBtnPhone" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
+         </div>
+ 
+         <div id="cartIconPhone">
+             <span ><a href="cart.html">
+                 <p id="cartIndicatorPhone" style="margin-top:5px;">0</p>
+                 <img class="paddingTop" id="cartBtnPhone" src="landingImages/cartIcon.png"></a></span>
+         </div>
+     </div>
+    
+ 
+     <div id="phoneDiscountBar">         
+         
+         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+             <div class="carousel-inner">
+ 
+               <div class="carousel-item active">
+                 <p>IT'S NOT TOO LATE.</p>
+               </div>
+ 
+               <div class="carousel-item">
+                 <p>2-DAY PREMIUM DELIVERY: 12/19, 10AM PT </p>
+               </div>
+ 
+               <div class="carousel-item">
+                 <p>NOW MARKDOWNS UP TO 60% OFF</p>
+               </div>
+ 
+               <div class="carousel-item">
+                 <p>BUY A $100 E-GIFT CARD, GET $20</p>
+               </div>
+ 
+             </div>
+           </div>
+ 
+ </div>
+ 
+ 
+ </div>
+
     
 </body>    
 </html>

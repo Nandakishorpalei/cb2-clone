@@ -69,6 +69,7 @@ wishBtn.addEventListener("mouseleave", () =>{
   wishBtn.style.borderBottom = "none";
 })
 
+
 // //cart button functionality
 // let cartBtn = document.getElementById("cartBtn");
 // let cartDetails = document.getElementById("cartDetails");
@@ -211,4 +212,27 @@ document.getElementById("signOut").addEventListener("click",function(){
 
 document.getElementById("homeLogo").addEventListener("click",function(){
   window.location.href="index.html";
-})
+});
+
+
+
+//phone menu
+
+menuBtnPhone.addEventListener("click", () => {
+  if (x === 1) {
+    sidebar.style.left = "0";
+    menuicon.innerText = "close";
+    x += 1;
+  } else {
+    sidebar.style.left = "-350px";
+    menuicon.innerText = "menu";
+    x -= 1;
+  }
+  });
+
+
+//navbar cart item count
+let cartData = JSON.parse(localStorage.getItem("cbCartItem"));
+let cartItemCount = cartData.length;
+
+document.getElementById("cartIndicator").textContent= cartItemCount;

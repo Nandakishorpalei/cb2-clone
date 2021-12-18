@@ -93,7 +93,7 @@
     line-height:20px;
     font-weight:300;
 }
-.shipping_input_name{
+.shipping_input_name{ 
   width: 60%;
     margin: auto;
     display: flex;
@@ -102,6 +102,9 @@
 .shipping_input_name input{
   width: 45%;
   height: 28px;
+}
+form input{
+  margin-bottom:10px;
 }
 #shipping_street{
   width: 60%;
@@ -147,6 +150,7 @@
     font-size:17px;
     line-height:20px;
     font-weight:500;
+    margin-top:10px;
 }
 #shipping_phoneno span{
   font-size:10px;

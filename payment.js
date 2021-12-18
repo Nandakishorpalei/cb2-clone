@@ -36,11 +36,43 @@ let cityName = document.getElementById("city");
 let zipCode = document.getElementById("zip");
 let address = document.getElementById("address");
 
-let data = JSON.parse(localStorage.getItem("CheckoutAddress"));
-let userData = data[0];
-console.log('userData:', userData)
+let userData = JSON.parse(localStorage.getItem("CheckoutAddress"));
 
 username.textContent = `${userData.first} ${userData.last}`;
 cityName.textContent =  userData.city_name;
 zipCode.textContent =  userData.zip_code;
 address.textContent = userData.address;
+
+
+
+async function total(){
+
+    let checkout_data  = await JSON.parse(localStorage.getItem("cartValue"));
+
+    let put = document.getElementById("Sipping_Merchandice_price");
+    let total = document.getElementById("Shipping_Order_last_total");
+
+
+    let sum = checkout_data.merchandisePrice;
+
+    put.textContent= `$${sum}`
+
+    total.textContent = `$${checkout_data.price}`;
+
+}
+total();
+
+
+// payment validation
+
+let addressSaved = false;
+document.querySelector("form").addEventListener("submit",function(e){
+    e.preventDefault();
+    addressSaved = true;
+});
+
+document.getElementById("Checkout_Button").addEventListener("click",function(){
+    if(addressSaved){
+        window.location.href="paysuccess.html";
+    }
+})
