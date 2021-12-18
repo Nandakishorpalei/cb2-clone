@@ -34,7 +34,7 @@ cartDataSetting();
 async function cartDataSetting(){
     try{
 
-   cartData = await JSON.parse(localStorage.getItem("cbWishlistItem")) ;
+   cartData = await JSON.parse(localStorage.getItem("cbCartItem")) ;
     console.log('cartData:', cartData)
 
   let cartLength = cartData.length;
@@ -70,6 +70,9 @@ finally{
 
 // show cart products
 
+let finalValue = 0;
+let merchandisePrice = 0;
+
 async function displayCartProducts(products){
 
 try{
@@ -83,11 +86,17 @@ let shippingValue = document.getElementById("shippingValue");
 let taxValue = document.getElementById("taxValue");
 let totalEstValue = document.getElementById("totalEstValue");
 
-shippingValue.textContent = "$120.00";
-taxValue.textContent = "$33.00";
+if(cartItems != 0){
+    shippingValue.textContent = "$120.00";
+    taxValue.textContent = "$33.00";
+}else{
+    shippingValue.textContent = "0.00";
+taxValue.textContent = "0.00";
+}
+
 
 let totalItemValue = products.reduce((ac,el)=>{
-    return  ac+el.price
+    return  ac+el.total
     },0);
 
 let cartProductContainer = document.getElementById("cartProductContainer");
@@ -125,7 +134,8 @@ products.forEach((element,index) => {
     topMiddle.setAttribute("id","topMiddle");
     let quantity = document.createElement("input");
     quantity.setAttribute("id","quantity");
-    quantity.defaultValue="1";
+    quantity.defaultValue= element.count;
+
     quantity.setAttribute("type","number");
     let update = document.createElement("button");
     update.textContent = "update";
@@ -139,21 +149,33 @@ products.forEach((element,index) => {
     function updateCount(){
         itemQuantity = quantity.value;
     }
+
+  console.log(totalItemValue);
+  console.log(itemQuantity);
+
+    finalValue += ((Number(totalItemValue))*(Number(itemQuantity)));
+    console.log('finalValue:', finalValue)
    
-    merchandiseValue.textContent = `$${((totalItemValue*itemQuantity)).toFixed(2)}`;
-    totalEstValue.textContent = `$${((totalItemValue*itemQuantity)+ 153 ).toFixed(2)}`;
+    merchandiseValue.textContent = `$${finalValue}`;
+    if(products.length != 0){
+    totalEstValue.textContent = `$${(finalValue + 153 )}`;
+}
     update.addEventListener("click",function(){
-        merchandiseValue.textContent = `$${((totalItemValue*itemQuantity)).toFixed(2)}`;
-        document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity)).toFixed(2)}`;
-        totalEstValue.textContent = `$${((totalItemValue*itemQuantity)+ 153 ).toFixed(2)}`;
-
-        let totalValueToSend = ((totalItemValue*itemQuantity)+ 153 ).toFixed(2);
-        let cartPrice = {
-            price:totalValueToSend
+        merchandiseValue.textContent = `$${finalValue}`;
+        document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity))}`;
+        if(products.length != 0){
+        totalEstValue.textContent = `$${(finalValue+ 153 )}`;
         }
-        localStorage.setItem("cartPrice",JSON.stringify(cartPrice));
-
     })
+
+    merchandisePrice = finalValue;
+    let totalCost = {
+        price:finalValue,
+        merchandisePrice:merchandisePrice
+    }
+    
+    localStorage.setItem("cartValue",JSON.stringify(totalCost));
+
 
     topMiddle.append(quantity,update);
 
@@ -258,19 +280,24 @@ finally{
 
 
 
-
-
 document.getElementById("applyButton").addEventListener("click",function(){
   let inputPromo =  document.getElementById("promoCode").value;
 
-  let totalItemValue = cartData.reduce((ac,el)=>{
-    return  ac+el.price
-    },0);
-
-    let itemQuantity = document.getElementById("quantity").value;
-
    if(inputPromo == "Masai30"){
-    document.getElementById("totalEstValue").textContent = `$${((((totalItemValue*itemQuantity)+ 153) * 70 ) /100).toFixed(2) }`;
+
+    finalValue = (finalValue * 70 )/100;
+
+    document.getElementById("totalEstValue").textContent = `$${finalValue}`;
+    alert("Promo code applied successfully");
+
+    let totalCost = {
+        price:finalValue,
+        merchandisePrice:merchandisePrice
+    }
+    localStorage.setItem("cartValue",JSON.stringify(totalCost));
+
+   }else{
+    alert("Invalid Promo code");
    }
 })
 

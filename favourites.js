@@ -1,7 +1,4 @@
-// import footer & append 
-import footer from "./components/footer.js";
-let footerDiv = document.getElementById("footerDiv");
-footerDiv.innerHTML = footer();
+
 
 // add below line in head section for footer style
 {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
@@ -74,7 +71,18 @@ let data =  JSON.parse(localStorage.getItem("cbWishlistItem")) || [];
   btn2.innerText = "ADD TO CART";
   btn2.id = "button_addtocart";
    btn2.addEventListener("click" , ()=>{
-       localStorage.setItem("cbCartItem" , JSON.stringify(item));
+    let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+ let data = {
+  count:1,
+  total:item.price,
+  img1:item.img1,
+  name:item.name,
+  catagory:item.catagory,
+ }
+
+
+ productArray.push(data);
+       localStorage.setItem("cbCartItem" , JSON.stringify(productArray));
        window.location.href="cart.html";
    })
 

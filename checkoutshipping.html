@@ -185,27 +185,26 @@ function nexttopayment(){
 
  arr.push(data);
 
- localStorage.setItem("Checkoutdata",JSON.stringify(arr));
+ localStorage.setItem("CheckoutAddress",JSON.stringify(arr));
 
     window.location.href = "#";
 }
 
-let checkout_data  = JSON.parse(localStorage.getItem("cbWishlistItem"));
-function total(checkout_data){
+async function total(){
+
+    let checkout_data  = await JSON.parse(localStorage.getItem("cartValue"));
+
     let put = document.getElementById("Sipping_Merchandice_price");
     let total = document.getElementById("Shipping_Order_last_total");
     let tax = document.getElementById("Sipping_Merchandice_tax");
 
-    let sum = 0;
-    for(var i=0 ; i<checkout_data.length ; i++) {
-        sum = sum + checkout_data[i].price;
-    }
+    let sum = checkout_data.merchandisePrice;
 
-    put.textContent= "$"+(sum+120+33);
+    put.textContent= `$${sum}`
 
-    total.textContent = "$"+(sum + 10.80+120+33);
+    total.textContent = `$${checkout_data.price}`;
 
 }
-total(checkout_data);
+total();
 
 </script>

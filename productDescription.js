@@ -179,6 +179,8 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   let iconTitle = document.getElementById("iconTitle");
   iconTitle.innerHTML = `${name}`;
 
+  let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+
   let desData = {
     count,
     total,
@@ -186,8 +188,8 @@ function addDragDetail({ price, img1, name, catagory }, count) {
     name,
     catagory,
   };
-
-  localStorage.setItem("cbCartItem", JSON.stringify(desData));
+productArray.push(desData);
+  localStorage.setItem("cbCartItem", JSON.stringify(productArray));
 }
 
 // script for dragdown

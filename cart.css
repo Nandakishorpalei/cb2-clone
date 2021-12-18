@@ -5,7 +5,7 @@ body{
    width:96%;
    margin-left:4%;
    font-family: 'Open Sans', sans-serif;
-   justify-content: space-between;
+   justify-content: space-between;   
  
 }
 #cartLength{
@@ -319,6 +319,9 @@ width:100px;
 
 
 /* style for dynamic cart product */
+#cartProductContainer{
+    margin-top:-20%;
+}
 #cartProductDetail{
     width:66%;
     padding-right: 2%;
