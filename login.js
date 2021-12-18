@@ -1,3 +1,7 @@
+//user authentication
+
+
+
 // import footer & append 
 import footer from "./components/footer.js";
 let footerDiv = document.getElementById("footerDiv");
@@ -76,9 +80,14 @@ try{
     console.log('data:', data)
 
     if(currentUser == data.username){
-        alert("matched");
+        let user={
+            authenticated:true
+        }
+      localStorage.setItem("authenticate",JSON.stringify(user));
+      window.location.href = "newPage.html";
+        
     }else{
-        alert("not matched");
+        alert("invalid credentials! check again");
     }
 }
 catch(error){

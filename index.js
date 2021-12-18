@@ -9,4 +9,5 @@ var script = document.createElement('script');
           
         script.src = "navbar.js";
           
-   document.head.appendChild(script)
+   document.head.appendChild(script);
+
