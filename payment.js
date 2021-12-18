@@ -29,3 +29,18 @@ expMonth.innerHTML= months.map(el=>{
 expYear.innerHTML = year.map(el=>{
     return option(el,el)
 })
+
+
+let username = document.getElementById("userName");
+let cityName = document.getElementById("city");
+let zipCode = document.getElementById("zip");
+let address = document.getElementById("address");
+
+let data = JSON.parse(localStorage.getItem("CheckoutAddress"));
+let userData = data[0];
+console.log('userData:', userData)
+
+username.textContent = `${userData.first} ${userData.last}`;
+cityName.textContent =  userData.city_name;
+zipCode.textContent =  userData.zip_code;
+address.textContent = userData.address;
