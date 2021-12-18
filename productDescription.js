@@ -176,6 +176,9 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   let subTotal2 = document.getElementById("subTotal2");
   subTotal2.innerHTML = `<strong>$${total}</strong>`;
 
+  let iconTitle = document.getElementById("iconTitle");
+  iconTitle.innerHTML = `${name}`;
+
   let desData = {
     count,
     total,

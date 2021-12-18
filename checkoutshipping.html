@@ -139,7 +139,7 @@
                  </div>
                  <div id="Shipping_Href_Cart">
                      <a href="#">Edit Cart</a>
-                     <p class="Sipping_Merchandice">$149.00</p>
+                     <p id="Sipping_Merchandice_price" class="Sipping_Merchandice">$149.00</p>
                      <p class="Sipping_Merchandice">$21.95</p>
                      <p class="Shipping_Discount">-$21.95</p>
                      <p class="Sipping_Merchandice">$10.80</p>
@@ -149,7 +149,7 @@
              <hr>
              <div id="Shipping_Order_last">
              <p>Order Total:</p>
-             <p>$159.00</p>
+             <p id="Shipping_Order_last_total">$159.00</p>
             </div>
 
            </div>
@@ -189,5 +189,23 @@ function nexttopayment(){
 
     window.location.href = "#";
 }
+
+let checkout_data  = JSON.parse(localStorage.getItem("cbWishlistItem"));
+function total(checkout_data){
+    let put = document.getElementById("Sipping_Merchandice_price");
+    let total = document.getElementById("Shipping_Order_last_total");
+    let tax = document.getElementById("Sipping_Merchandice_tax");
+
+    let sum = 0;
+    for(var i=0 ; i<checkout_data.length ; i++) {
+        sum = sum + checkout_data[i].price;
+    }
+
+    put.textContent= "$"+(sum+120+33);
+
+    total.textContent = "$"+(sum + 10.80+120+33);
+
+}
+total(checkout_data);
 
 </script>
