@@ -527,21 +527,5 @@ else{
     document.getElementById("productContainer").style.opacity="1";
  });
 
- var id;
-// clearTimeout(id);
-
-//  id = setTimeout(function(){
-//      alert("hello");
-//     localStorage.removeItem("authenticate");
-//     },5000)
-
-    // 1800000
-
- window.onbeforeunload = function(){
-    myfun();
-    return 'Are you sure you want to leave?';
- };
-
-// window.addEventListener('unload', function(event) {
-//     alert('I am the 4th and last one…');
-//   });
+ document.getElementById("menuicon").style.display="none";
+ 

@@ -207,3 +207,8 @@ document.getElementById("signOut").addEventListener("click",function(){
   localStorage.removeItem("authenticate");
   window.location.href="index.html";
 })
+
+
+document.getElementById("homeLogo").addEventListener("click",function(){
+  window.location.href="index.html";
+})

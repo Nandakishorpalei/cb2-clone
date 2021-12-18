@@ -136,9 +136,22 @@
 </html>
 <script type="module">
   // Header navbar
-  // import navbar from "./components/navbar.js";
-  // console.log("navbar:", navbar());
-  // let header = document.querySelector("header");
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+
+ // import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
 
   // header.innerHTML = navbar();
 
@@ -223,4 +236,9 @@
   };
 
   getData(productData);
+
+
+  document.getElementById("menuicon").style.display="none";
+
+
 </script>

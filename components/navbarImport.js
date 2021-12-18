@@ -50,7 +50,7 @@ function navbar(){
             <!-- log div -->
 
             <div id="cb2logo">
-                <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
+                <img id="homeLogo" src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
             </div>
 
 
