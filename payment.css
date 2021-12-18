@@ -8,12 +8,264 @@ body{
 }
 #payLeft{
     background-color: white;
-    height: 1833px;
-    width: 73%;
-    border: 1px solid red;
+    /* height: 1833px; */
+    width: 70%;
+    /* margin: auto; */
 }
+
+#payLeft .shipping_cb2logo{
+    border: 6px solid black;
+    width: 12%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#payLeft .shipping_cb2logo_check{
+    padding: 1%;
+    text-align: center;
+    margin: auto;
+    font-size:20px;
+    line-height:28px;
+    font-weight:300;
+
+}
+
+
 #payRight{
-    height: 1833px;
-    width: 27%;
-    border: 1px solid green;
+    /* height: 1833px; */
+    width: 30%;
+}
+#shipping_left_number{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+#shipping_left_number .span1{
+    height: 20%;
+    width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#shipping_left_number>div{
+    height: 20%;
+    width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+#shipping_left_tag{
+    width: 60%;
+  display: flex;
+  gap: 25%;
+  margin: auto;
+  margin-top: 1%;
+}
+#shipping_left_tag div{
+    height: 10%;
+    width: 15%;
+    text-align: center;
+    font-size:14px;
+    line-height:18px;
+    font-weight:300;
+}
+
+#shipping_left_tag div:nth-child(1){
+    margin-left: -4%;
+}
+
+#shipping_left_tag div:nth-child(2){
+    margin-left: 10%;
+}
+
+#shipping_left_tag div:nth-child(3){
+    margin-left: 8%;
+}
+
+#Checkout_payement_under{
+    width: 50%;
+    padding-left: 25%;
+}
+
+#Checkout_payement_under h2{
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+}
+#Checkout_payement_under p{
+    font-size:13px;
+    line-height:10px;
+    font-weight:300;
+}
+#Checkout_payement_under a{
+    font-size:13px;
+    line-height:16px;
+    font-weight:300;
+    color: black;
+}
+#Checkout_payement_address{
+    border: 1px solid black;
+    padding: 1%;
+}
+#Checkout_payement_Button a{
+    display: flex;
+    justify-content: flex-end;
+}
+#Checkout_Button{
+    padding: 0.5%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 50%;
+    font-size: 16px;
+    
+}
+
+
+/* right box */
+
+#payRight{
+    display: flex;
+    background-color: rgb(244,244,244);
+    width: 30%;
+}
+#shipping_right_total{
+    background-color: white;
+    margin: 2%;
+    padding: 0.5%;
+    margin-top: 3%; 
+    width: 18%; 
+    position: fixed;
+}
+#main_shipping_right_only{
+    display: flex;
+    gap: 9%;
+   
+}
+#main_shipping_right_only a{
+  color:rgb(102, 102, 102);
+}
+#main_shipping_right_only .Sipping_Merchandice{
+  color:rgb(102, 102, 102);
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+} 
+#Shipping_Order_last{
+    display: flex;
+    gap: 35%;
+}
+.Shipping_Discount {
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+  color: red;
+}
+#Shipping_Href_Cart{
+    margin-top: 5%;
+}
+#Shipping_Order_last{
+    font-size:100%;
+    line-height:26px;
+    font-weight:500;
+}
+#card_details{
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+#card_details1{
+    width: 100%;
+    height: 12%;
+    line-height: 10px;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+#card_details1 > p:nth-child(1){
+    font-size: 20px;
+}
+
+#card_details1 > p:nth-child(2){
+    font-size: 14px;
+}
+
+#card_details_form{
+    background-color: #f4f4f4;
+    height: 80%;
+    width: 100%;
+    border-top: 2px solid black;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+#card_details_form div{
+    height: 20%;
+}
+#credit_number{
+    height: 23px;
+    border: 2px solid black;
+    width: 99%;  
+}
+#card_details_form div:nth-child(2){
+    height: 30%;
+}
+#card_details_form div:nth-child(3){
+    line-height: 0;
+}
+#dropdown{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#dropdown select{
+    width: 45%;
+    height: 100%;
+    border: 2px solid black;
+}
+#cvv{
+    border: 2px solid black;
+    height: 23px;
+    width: 45%;
+}
+#savecard{
+    height: 35px;
+    background-color: black;
+    color: white;
+    width: 40%;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+
+
+/* css for order placed */
+
+#order_placed{
+    width: 50%;
+    height: 30%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#order_placed img{
+    height: 40%;
+    width: 30%;
+    margin-top: 5%;
+}
+
+#order_placed p:nth-child(1){
+    font-size: 14px;
+}
+
+#order_placed p:nth-child(2){
+    font-size: 18px;
+    color: green;
+}
+#order_placed a{
+    color: tomato;
 }
