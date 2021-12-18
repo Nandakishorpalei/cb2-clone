@@ -10,7 +10,6 @@ body{
     background-color: white;
     /* height: 1833px; */
     width: 70%;
-    border: 1px solid red;
     /* margin: auto; */
 }
 
@@ -35,7 +34,6 @@ body{
 #payRight{
     /* height: 1833px; */
     width: 30%;
-    border: 1px solid green;
 }
 #shipping_left_number{
     width: 60%;
@@ -111,7 +109,7 @@ body{
     border: 1px solid black;
     padding: 1%;
 }
-#Checkout_payement_Button{
+#Checkout_payement_Button a{
     display: flex;
     justify-content: flex-end;
 }
@@ -240,4 +238,34 @@ body{
     width: 40%;
     margin-top: 4%;
     margin-left: 3%;
+}
+
+
+/* css for order placed */
+
+#order_placed{
+    width: 50%;
+    height: 30%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#order_placed img{
+    height: 40%;
+    width: 30%;
+    margin-top: 5%;
+}
+
+#order_placed p:nth-child(1){
+    font-size: 14px;
+}
+
+#order_placed p:nth-child(2){
+    font-size: 18px;
+    color: green;
+}
+#order_placed a{
+    color: tomato;
 }
