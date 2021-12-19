@@ -169,12 +169,13 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   let rightP1 = document.getElementById("rightP1");
   rightP1.innerHTML = `<strong>Your Cart: ${count} items</strong>`;
 
-  let total = count * price;
+  let total = price;
+  let valueToShow = price * count;
   let subTotal1 = document.getElementById("subTotal1");
-  subTotal1.innerText = `$${total}`;
+  subTotal1.innerText = `$${valueToShow}`;
 
   let subTotal2 = document.getElementById("subTotal2");
-  subTotal2.innerHTML = `<strong>$${total}</strong>`;
+  subTotal2.innerHTML = `<strong>$${valueToShow}</strong>`;
 
   let iconTitle = document.getElementById("iconTitle");
   iconTitle.innerHTML = `${name}`;

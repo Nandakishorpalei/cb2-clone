@@ -47,18 +47,17 @@ address.textContent = userData.address;
 
 async function total(){
 
-    let checkout_data  = await JSON.parse(localStorage.getItem("cartValue"));
+    let checkoutData  = await JSON.parse(localStorage.getItem("cartValue"));
 
     let put = document.getElementById("Sipping_Merchandice_price");
     let total = document.getElementById("Shipping_Order_last_total");
+    let Discount = document.getElementById("discount");
 
+    let allTotal = Number(checkoutData.merchandisePrice);
 
-    let sum = checkout_data.merchandisePrice;
-
-    put.textContent= `$${sum}`
-
-    total.textContent = `$${checkout_data.price}`;
-
+    put.textContent= `$${allTotal.toFixed(2)}`
+    discount.textContent= `$${checkoutData.discount}`
+    total.textContent =  `$${checkoutData.price}`;
 }
 total();
 

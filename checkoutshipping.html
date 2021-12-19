@@ -143,14 +143,14 @@
                      <p class="Sipping_Merchandice">Merchandise:</p>
                      <p class="Sipping_Merchandice">Shipping & Handling :</p>
                      <p class="Shipping_Discount">Shipping Discount :</p>
-                     <p class="Sipping_Merchandice">Tax:</p>
+                     <p class="Sipping_Merchandice" style="color:green">Discount:</p>
                  </div>
                  <div id="Shipping_Href_Cart">
                      <a href="#">Edit Cart</a>
                      <p id="Sipping_Merchandice_price" class="Sipping_Merchandice">$149.00</p>
                      <p class="Sipping_Merchandice">$21.95</p>
                      <p class="Shipping_Discount">-$21.95</p>
-                     <p class="Sipping_Merchandice">$10.80</p>
+                     <p class="Sipping_Merchandice" id="discount">$10.80</p>
                  </div>
              </div>
 
@@ -202,17 +202,17 @@ function nexttopayment(){
 
 async function total(){
 
-    let checkout_data  = await JSON.parse(localStorage.getItem("cartValue"));
+    let checkoutData  = await JSON.parse(localStorage.getItem("cartValue"));
 
     let put = document.getElementById("Sipping_Merchandice_price");
     let total = document.getElementById("Shipping_Order_last_total");
+    let Discount = document.getElementById("discount");
 
-    let sum = checkout_data.merchandisePrice;
+    let allTotal = Number(checkoutData.merchandisePrice);
 
-    put.textContent= `$${sum}`
-
-    total.textContent = `$${checkout_data.price}`;
-
+    put.textContent= `$${allTotal.toFixed(2)}`
+    discount.textContent= `$${checkoutData.discount}`
+    total.textContent =  `$${checkoutData.price}`;
 }
 total();
 

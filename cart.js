@@ -88,23 +88,21 @@ let totalEstValue = document.getElementById("totalEstValue");
 
 if(cartItems != 0){
     shippingValue.textContent = "$120.00";
-    taxValue.textContent = "$33.00";
+    taxValue.textContent = "$00.00";
 }else{
     shippingValue.textContent = "0.00";
 taxValue.textContent = "0.00";
 }
 
 
-let totalItemValue = products.reduce((ac,el)=>{
-    return  ac+el.total
-    },0);
+
 
 let cartProductContainer = document.getElementById("cartProductContainer");
 cartProductContainer.innerHTML=null;
 
 products.forEach((element,index) => {
    console.log(element)
-
+   let totalItemValue = 0;
         //create productContainer 
     let cartProductDetail = document.createElement("div");
     cartProductDetail.setAttribute("id","cartProductDetail");
@@ -150,7 +148,7 @@ products.forEach((element,index) => {
         itemQuantity = quantity.value;
     }
 
-  console.log(totalItemValue);
+     totalItemValue = element.total;
   console.log(itemQuantity);
 
     finalValue += ((Number(totalItemValue))*(Number(itemQuantity)));
@@ -158,23 +156,68 @@ products.forEach((element,index) => {
    
     merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
     if(products.length != 0){
-    totalEstValue.textContent = `$${(finalValue + 153 ).toFixed(2)}`;
+    totalEstValue.textContent = `$${(finalValue + 120 ).toFixed(2)}`;
 }
     update.addEventListener("click",function(){
-        merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
-        document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity).toFixed(2))}`;
-        if(products.length != 0){
-        totalEstValue.textContent = `$${(finalValue+ 153 ).toFixed(2)}`;
-        }
-    })
 
-    merchandisePrice = finalValue;
-    let totalCost = {
-        price:finalValue,
-        merchandisePrice:merchandisePrice
+    if(itemQuantity == 0){
+        products.splice(index,1);
+        localStorage.setItem("cbCartItem",JSON.stringify(products));
     }
     
-    localStorage.setItem("cartValue",JSON.stringify(totalCost));
+    let updatedCart = JSON.parse(localStorage.getItem("cbCartItem"));
+
+    if(updatedCart.length == 0){
+        
+        zeroContainer.style.display="flex";
+        cartContainer.style.display="none";
+        cartCarousel.style.display="none";
+        rightContainer.style.display="none";
+    } 
+    else{
+        zeroContainer.style.display="none";
+        cartContainer.style.display="flex";
+        cartCarousel.style.display="block";
+        rightContainer.style.display="block";
+    }
+  finalValue = 0;
+
+
+        //update product count 
+
+        let updatedArr = [];
+        products.forEach((el,currentIndex)=>{
+            if(index == currentIndex){
+                let data = {
+                    count:Number(itemQuantity),
+                    total:el.total,
+                    img1:el.img1,
+                    name:el.name,
+                    catagory:el.catagory,
+                   }
+                   updatedArr.push(data);
+
+            }else{
+                updatedArr.push(el);
+            }
+           
+        })
+       
+
+        localStorage.setItem("cbCartItem" , JSON.stringify(updatedArr));
+        let productsArray = JSON.parse(localStorage.getItem("cbCartItem"));
+
+        finalValue = 0;
+
+        displayCartProducts(productsArray)
+
+
+        // merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
+        // document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity).toFixed(2))}`;
+        // if(products.length != 0){
+        // totalEstValue.textContent = `$${(finalValue+ 153 ).toFixed(2)}`;
+        // }
+    })
 
 
     topMiddle.append(quantity,update);
@@ -185,7 +228,7 @@ products.forEach((element,index) => {
     topRight.setAttribute("id","topRight");
     let price = document.createElement("price");
     price.setAttribute("id","price");
-    price.textContent = `$${(totalItemValue*itemQuantity)}.00`;
+    price.textContent = `$${(Number(element.total)*Number(itemQuantity))}.00`;
     topRight.append(price);
 
 
@@ -224,7 +267,7 @@ products.forEach((element,index) => {
 
     cross.addEventListener("click",function(){
         cartData.splice(index,1);
-        localStorage.setItem("cbWishlistItem",JSON.stringify(cartData));
+        localStorage.setItem("cbCartItem",JSON.stringify(cartData));
 
         if(cartData.length == 0){
         
@@ -239,7 +282,7 @@ products.forEach((element,index) => {
             cartCarousel.style.display="block";
             rightContainer.style.display="block";
         }
-
+      finalValue = 0;
 
         displayCartProducts(cartData);
     })
@@ -280,28 +323,47 @@ finally{
 
 
 
+let couponApplied = false;
+
 document.getElementById("applyButton").addEventListener("click",function(){
   let inputPromo =  document.getElementById("promoCode").value;
 
    if(inputPromo == "Masai30"){
 
-    finalValue = (finalValue * 70 )/100;
+    let updatedValue = (finalValue * 70 )/100;
 
-    document.getElementById("totalEstValue").textContent = `$${finalValue.toFixed(2)}`;
+    document.getElementById("totalEstValue").textContent = `$${updatedValue.toFixed(2)}`;
     alert("Promo code applied successfully");
 
+
+    let taxValue = document.getElementById("taxValue");
+    taxValue.textContent = ((finalValue * 30 )/100).toFixed(2);
+
     let totalCost = {
-        price:finalValue,
-        merchandisePrice:merchandisePrice
+        price:updatedValue.toFixed(2),
+        discount:((finalValue * 30 )/100).toFixed(2),
+        merchandisePrice:finalValue
     }
     localStorage.setItem("cartValue",JSON.stringify(totalCost));
-
+    couponApplied = true;
    }else{
     alert("Invalid Promo code");
    }
 })
 
-
 document.getElementById("checkOutButton").addEventListener("click",function(){
     window.location.href = "checkoutshipping.html";
+
+    if(!couponApplied){
+        alert("heel");
+        let totalCost = {
+            price:finalValue,
+            discount:0,
+            merchandisePrice:finalValue
+        }
+        
+        localStorage.setItem("cartValue",JSON.stringify(totalCost));
+            
+        }
+    
 })

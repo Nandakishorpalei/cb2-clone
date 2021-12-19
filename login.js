@@ -84,7 +84,7 @@ try{
             authenticated:true
         }
       localStorage.setItem("authenticate",JSON.stringify(user));
-      window.location.href = "newPage.html";
+      window.location.href = "index.html";
         
     }else{
         alert("invalid credentials! check again");
