@@ -355,7 +355,6 @@ document.getElementById("checkOutButton").addEventListener("click",function(){
     window.location.href = "checkoutshipping.html";
 
     if(!couponApplied){
-        alert("heel");
         let totalCost = {
             price:finalValue,
             discount:0,
