@@ -12,9 +12,9 @@
 ---
 ## Our Team Members ❤️
 
-- **[Nanda Kishore Palei](https://github.com/nitesh172)**
-- **[Saiprasad Palei](https://github.com/jayeshk99)**
-- **[Tarun Ahriwar](https://github.com/SonaliGupta1216)**
+- **[Nanda Kishore Palei](https://github.com/Nandakishorpalei)**
+- **[Saiprasad Palei](https://github.com/sai12348765patil)**
+- **[Tarun Ahriwar](https://github.com/CoderTarun)**
 - **[Yatharth Verma](https://github.com/yeti201)**
 
 ---
