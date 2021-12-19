@@ -232,7 +232,9 @@ menuBtnPhone.addEventListener("click", () => {
 
 
 //navbar cart item count
-let cartData = JSON.parse(localStorage.getItem("cbCartItem"));
+let cartData = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+console.log('cartData:', cartData)
+
 let cartItemCount = cartData.length;
 
 document.getElementById("cartIndicator").textContent= cartItemCount;
