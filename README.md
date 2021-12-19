@@ -25,14 +25,14 @@
 - `Sign-Up`: User sign up to be done on Masai Authetication API.
 - `Sign-In`: User authentication to check whether user phone number and password match with details existing on the server.
 - `Product Category Page`: New products created dynamically with filter by price and category.
+- `Product Details Page` : Details of single products.
+- `Wishlist`: Implemented a wishlist to save items the user likes. 
 - `Cart`: User can see or remove products added in the cart and apply discount coupons.
 - `Checkout Page`: Users can add the delivery address.
 - `Payment Page`: Users can add their payment details.
-- `Order Successful`: cart gets empty automatically in local storage, once the user lands on this page.
+- `Order Successful`: Cart gets empty automatically in local storage, once the user lands on this page.
 - `Additional Features`: Kept the branding, fonts, colors and favicon and titles consistent throughtout the whole site to give a feel like the original site.
 
----
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=nandakishorpalei.nandakishorpalei)
 ---
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&hide=ejs,shell&theme=tokyonight)]
